@@ -1,0 +1,24 @@
+.o-modal {
+  @include basic-transition(transform, $duration: 0.5s);
+
+  position: fixed;
+  z-index: map-get($z-layers, modal);
+  left: 50%;
+  top: 50%;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  will-change: transform;
+  pointer-events: none;
+  -webkit-overflow-scrolling: touch;
+
+  @supports (pointer-events: auto) {
+    display: block;
+    pointer-events: none;
+  }
+
+  &.is-active {
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+  }
+}
