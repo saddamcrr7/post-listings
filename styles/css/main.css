@@ -710,6 +710,62 @@ a:hover, a:active, a:focus {
      object-position: center;
 }
 
+.c-input-select {
+  position: relative;
+  cursor: pointer;
+}
+.c-input-select__options {
+  position: absolute;
+  bottom: -55px;
+  left: 0;
+  right: 0;
+  height: 0px;
+  overflow: hidden;
+}
+
+.c-search {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1269px;
+  margin-top: 62px;
+  margin-bottom: 51px;
+}
+.c-search__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.c-search__input {
+  color: #8D8C95;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 2px;
+  background: #fff;
+  max-width: 310px;
+  width: 100%;
+  margin-right: 50px;
+}
+.c-search__button {
+  font-size: 13px;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  padding: 15px 56px;
+  background: #40BC37;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
 .u-clearfix:after {
   content: '' !important;
   display: block !important;

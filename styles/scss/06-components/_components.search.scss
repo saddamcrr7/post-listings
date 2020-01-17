@@ -1,0 +1,36 @@
+.c-search {
+    @include make-container();
+    max-width: 1239px + $grid-gutter-width;
+    margin-top: 62px;
+    margin-bottom: 51px;
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__input {
+        color: #8D8C95;
+        font-size: 13px;
+        font-family: $OpenSansFontFamily;
+        padding: 14px 28px;
+        border: none;
+        border-radius: 2px;
+        background: $white;
+        max-width: 310px;
+        width: 100%;
+        margin-right: 50px;
+    }
+
+    &__button {
+        font-size: 13px;
+        color: $white;
+        border: none;
+        border-radius: 2px;
+        outline: none;
+        padding: 15px 56px;
+        background: $color-green;
+        font-family: $RobotoCondensedFontFamily;
+    }
+}

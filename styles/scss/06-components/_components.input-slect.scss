@@ -1,0 +1,13 @@
+.c-input-select {
+    position: relative;
+    cursor: pointer;
+
+    &__options {
+        position: absolute;
+        bottom: -55px;
+        left: 0;
+        right: 0;
+        height: 0px;
+        overflow: hidden;
+    }
+}
