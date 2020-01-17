@@ -1,0 +1,15 @@
+.u-col {
+    @include make-col-ready();
+}
+
+.u-col--md-2 {
+    @include media-breakpoint-up(md) {
+        @include make-col(2)
+    }
+}
+
+.u-col--md-10 {
+    @include media-breakpoint-up(md) {
+        @include make-col(10)
+    }
+}

@@ -45,6 +45,7 @@
 @import '05-objects/objects.wrapper';
 @import '05-objects/objects.modal';
 @import '05-objects/objects.header';
+@import '05-objects/objects.products-slider';
 
 // 06. Components
 @import '06-components/components.alert';
@@ -52,8 +53,11 @@
 @import '06-components/components.navbar';
 @import '06-components/components.input-slect';
 @import '06-components/components.search';
+@import '06-components/components.product';
 
 // 99. Utilities
 @import '99-utilities/utilities.clearfix';
 @import '99-utilities/utilities.text';
 @import '99-utilities/utilities.visibility';
+@import '99-utilities/utilities.row';
+@import '99-utilities/utilities.col';

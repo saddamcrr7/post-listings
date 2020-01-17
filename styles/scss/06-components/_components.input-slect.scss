@@ -9,5 +9,6 @@
         right: 0;
         height: 0px;
         overflow: hidden;
+        z-index: map-get($z-layers, select-options);
     }
 }
