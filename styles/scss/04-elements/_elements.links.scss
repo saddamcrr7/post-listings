@@ -1,8 +1,8 @@
 a {
   @include basic-transition(color);
   @include on-event {
-    color: $color-dark;
+    color: $dark;
   }
 
-  color: $color-primary;
+  color: $primary;
 }

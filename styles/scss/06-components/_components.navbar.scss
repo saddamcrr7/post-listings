@@ -2,6 +2,8 @@ $nav-item-space: 42px;
 $nav-item-padding: 5px;
 
 .c-nav {
+    $root: &;
+
     @include make-container();
     max-width: 1485px + $grid-gutter-width;
     display: flex;
@@ -30,10 +32,41 @@ $nav-item-padding: 5px;
 
     &__navbar-item {
         margin-left: $nav-item-space;
+        cursor: pointer;
 
-        &--dropdown {
+        &--user {
             display: flex;
             align-items: center;
+
+            svg {
+                margin-left: 8px;
+            }
+        }
+
+        &--dropdown {
+            svg {
+                fill: rgba($white, .50);
+                margin-left: 5px;
+                margin-bottom: 2px;
+            }
+
+            #{$root}__navbar-link {
+                line-height: 15px;
+                display: flex;
+                align-items: center;
+
+                @include on-event() {
+                    svg {
+                        fill: $white;
+                    }
+                }
+            }
+        }
+
+        &--user {
+            svg {
+                fill: $white;
+            }
         }
     }
 
@@ -65,12 +98,12 @@ $nav-item-padding: 5px;
         }
 
         &--user {
-            display: block;
+            display: flex;
             width: 56px;
             height: 56px;
             border-radius: 28px;
             padding: 0;
-            border: 5px solid $white;
+            border: 3px solid $color-gray-green;
 
             img {
                 width: 100%;
