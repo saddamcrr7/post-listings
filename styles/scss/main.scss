@@ -28,6 +28,7 @@
 @import '02-tools/tools.on-event';
 @import '02-tools/tools.placeholder';
 @import '02-tools/tools.spacing';
+@import '02-tools/tools.object-fit';
 
 // 03. Generic
 @import '03-generic/generic.selection';
@@ -42,10 +43,12 @@
 @import '05-objects/objects.container';
 @import '05-objects/objects.wrapper';
 @import '05-objects/objects.modal';
+@import '05-objects/objects.header';
 
 // 06. Components
 @import '06-components/components.alert';
 @import '06-components/components.button';
+@import '06-components/components.navbar';
 
 // 99. Utilities
 @import '99-utilities/utilities.clearfix';

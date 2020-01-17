@@ -1,0 +1,19 @@
+<svg id="Share_icon" data-name="Share icon" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29">
+  <rect id="Rectangle_3449" data-name="Rectangle 3449" width="29" height="29" rx="14.5" fill="#dffae9"/>
+  <g id="Group_4696" data-name="Group 4696" transform="translate(8.181 7.219)">
+    <g id="Ellipse_910" data-name="Ellipse 910" transform="translate(7.395)" fill="none" stroke="#12be54" stroke-width="1">
+      <circle cx="2.56" cy="2.56" r="2.56" stroke="none"/>
+      <circle cx="2.56" cy="2.56" r="2.06" fill="none"/>
+    </g>
+    <g id="Ellipse_911" data-name="Ellipse 911" transform="translate(0 3.982)" fill="none" stroke="#12be54" stroke-width="1">
+      <circle cx="2.56" cy="2.56" r="2.56" stroke="none"/>
+      <circle cx="2.56" cy="2.56" r="2.06" fill="none"/>
+    </g>
+    <g id="Ellipse_912" data-name="Ellipse 912" transform="translate(7.395 8.533)" fill="none" stroke="#12be54" stroke-width="1">
+      <circle cx="2.56" cy="2.56" r="2.56" stroke="none"/>
+      <circle cx="2.56" cy="2.56" r="2.06" fill="none"/>
+    </g>
+    <path id="Path_23473" data-name="Path 23473" d="M-2733.438,7762.632l-3.422-2.021" transform="translate(2741.49 -7752.869)" fill="none" stroke="#12be54" stroke-width="1"/>
+    <path id="Path_23474" data-name="Path 23474" d="M-2733.438,7753.365l-3.422,1.866" transform="translate(2741.49 -7749.745)" fill="none" stroke="#12be54" stroke-width="1"/>
+  </g>
+</svg>

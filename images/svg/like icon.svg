@@ -1,0 +1,6 @@
+<svg id="like_icon" data-name="like icon" xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+  <g id="Group_4698" data-name="Group 4698">
+    <rect id="Rectangle_3448" data-name="Rectangle 3448" width="26" height="26" rx="13" fill="#dffae9"/>
+    <path id="like" d="M6.371,4.083A3.352,3.352,0,0,1,9.444,2,3.549,3.549,0,0,1,12.8,5.472a3.455,3.455,0,0,1-.109,1.312A5.8,5.8,0,0,1,10.92,9.733l-4.55,4.059L1.9,9.733A5.8,5.8,0,0,1,.129,6.784,3.455,3.455,0,0,1,.021,5.472,3.549,3.549,0,0,1,3.373,2,3.248,3.248,0,0,1,6.371,4.083Z" transform="translate(6.594 5.095)" fill="none" stroke="#12be54" stroke-width="1"/>
+  </g>
+</svg>

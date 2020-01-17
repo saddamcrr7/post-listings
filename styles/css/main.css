@@ -583,6 +583,101 @@ a:hover, a:active, a:focus {
   pointer-events: auto;
 }
 
+.o-header {
+  width: 100%;
+  background: #F87C00;
+  padding: 2.5px 0;
+}
+
+.c-nav {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1515px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.c-nav__brand {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+}
+.c-nav__brand:hover, .c-nav__brand:active, .c-nav__brand:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.c-nav__navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.c-nav__navbar-item {
+  margin-left: 42px;
+}
+.c-nav__navbar-item--dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.c-nav__navbar-link {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  padding: 5px;
+}
+.c-nav__navbar-link:hover, .c-nav__navbar-link:active, .c-nav__navbar-link:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.c-nav__navbar-link:hover:not(.c-nav__navbar-link--user):not(.c-nav__navbar-link--massages):not(.c-nav__navbar-link--notification)::before, .c-nav__navbar-link:active:not(.c-nav__navbar-link--user):not(.c-nav__navbar-link--massages):not(.c-nav__navbar-link--notification)::before, .c-nav__navbar-link:focus:not(.c-nav__navbar-link--user):not(.c-nav__navbar-link--massages):not(.c-nav__navbar-link--notification)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -18px;
+  height: 5px;
+  border-radius: 5px;
+  background: #fff;
+}
+.c-nav__navbar-link--user {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  padding: 0;
+  border: 5px solid #fff;
+}
+.c-nav__navbar-link--user img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 .u-clearfix:after {
   content: '' !important;
   display: block !important;
