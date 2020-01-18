@@ -51,8 +51,9 @@ var videosSliderTrendingCreators = new Swiper('.o-products-slider__container', {
       prevEl: '.o-products-slider__arrow--prev',
   },
   breakpoints: {
-    768: {
+    1200: {
       spaceBetween: 10,
+      slidesPerView: 'auto',
     },
   },
 })
