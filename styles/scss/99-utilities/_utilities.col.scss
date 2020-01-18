@@ -8,6 +8,18 @@
     }
 }
 
+.u-col--categories {
+    @include media-breakpoint-up(md) {
+        @include make-col(2.3)
+    }
+}
+
+.u-col--header {
+    @include media-breakpoint-up(md) {
+        @include make-col(9.7)
+    }
+}
+
 .u-col--md-10 {
     @include media-breakpoint-up(md) {
         @include make-col(10)

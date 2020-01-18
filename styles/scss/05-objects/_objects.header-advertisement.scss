@@ -1,0 +1,39 @@
+.o-header-advertisement {
+    margin-bottom: 15px;
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        max-height: 284px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            @include object-fit(cover);
+        }
+    }
+
+    &__tab {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        color: $color-dark-1;
+        font-size: 14px;
+        font-family: $RobotoCondensedFontFamily;
+        text-align: center;
+        padding: 10px;
+        width: 215px;
+        letter-spacing: 0;
+        cursor: pointer;
+        box-shadow: 0px 1px 3px #00000029;
+
+
+        &--active {
+            border-top: 2px solid #40BC37;
+        }
+    }
+}

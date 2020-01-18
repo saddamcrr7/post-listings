@@ -1,11 +1,11 @@
 $enable-grid-classes:  false;
 $grid-columns:                12 !default;
-$grid-gutter-width:           24px;
+$grid-gutter-width:           20px;
 $grid-row-columns:            6 !default;
 
 $container-max-widths: (
     sm: 540px,
-	md: 728px + $grid-gutter-width,
+	md: 728px,
 	lg: 1020px,
-	xl: 1360px + $grid-gutter-width,
+	xl: 1360px,
 )
