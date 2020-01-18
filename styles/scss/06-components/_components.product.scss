@@ -1,0 +1,40 @@
+.c-product {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__meta {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__options {
+        display: flex;
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__price {
+        display: flex;
+    }
+
+    &__price-row {
+        display: flex;
+    }
+
+    &__delivery {
+        display: flex;
+    }
+
+    &__title {
+        font-size: 15px;
+        font-weight: $font-weight-bold;
+    }
+}
