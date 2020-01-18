@@ -2,6 +2,7 @@ a {
   @include basic-transition(color);
   @include on-event {
     color: $dark;
+    text-decoration: none;
   }
 
   color: $primary;

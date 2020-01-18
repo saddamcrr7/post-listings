@@ -1,6 +1,36 @@
+@mixin hideCnotentForSmMd($root) {
+    #{$root} {
+
+        &__options,
+        &__sub,
+        &__meta-date {
+            display: none;
+        }
+    }
+}
+
 .c-product {
+    $root: &;
     display: flex;
-    flex-wrap: wrap;
+
+    &__tag {
+        cursor: pointer;
+        margin-right: 20px;
+
+        &--active {
+            svg {
+
+                .border,
+                .text {
+                    fill: $color-orange;
+                }
+
+                .circle {
+                    stroke: $color-orange;
+                }
+            }
+        }
+    }
 
     &__top {
         display: flex;
@@ -10,6 +40,19 @@
     &__meta {
         display: flex;
         flex-wrap: wrap;
+        align-items: flex-end;
+        margin-bottom: 5px;
+    }
+
+    &__meta-name,
+    &__meta-date {
+        color: #707070;
+    }
+
+    &__meta-time {
+        font-size: 10px;
+        color: #B1B1B1;
+        letter-spacing: 0;
     }
 
     &__options {
@@ -19,22 +62,131 @@
     &__row {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
     }
 
     &__price {
         display: flex;
+        color: $color-green;
+        align-items: center;
+        font-size: 14px;
     }
 
     &__price-row {
         display: flex;
+        align-items: center;
     }
 
     &__delivery {
+        color: #707070;
         display: flex;
+        font-size: 12px;
+    }
+
+    &__price-icon,
+    &__delivery-icon {
+        background: $color-yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__price-off {
+        font-size: 11px;
+        margin-right: 8px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            right: 0;
+            left: 0;
+            height: 1.5px;
+            background: #FF2020;
+            transform: rotate(14deg) translateY(-50%);
+        }
+    }
+
+    &__delivery,
+    &__price {
+        background: $white;
+        box-shadow: 0px 0px 10px #00000014;
+        font-family: $RobotoCondensedFontFamily;
     }
 
     &__title {
+        color: $color-dark-1;
         font-size: 15px;
         font-weight: $font-weight-bold;
+        margin-bottom: 2px;
+        font-family: $RobotoCondensedFontFamily;
+    }
+
+    &__sub {
+        font-size: 13px;
+        font-family: $OpenSansFontFamily;
+        letter-spacing: 0;
+        color: #707070;
+    }
+
+    &--medium {
+        width: 150px;
+        flex-wrap: wrap;
+        @include hideCnotentForSmMd($root);
+
+        #{$root} {
+
+            &__thumb {
+                margin-bottom: 5px;
+            }
+
+            &__title {
+                font-size: 13px;
+            }
+
+            &__meta-name {
+                font-size: 11px;
+            }
+
+            &__price {
+                margin-bottom: 6px;
+            }
+
+            &__delivery,
+            &__price {
+                width: 100%;
+                background: $white;
+                box-shadow: 0px 0px 10px #00000014;
+                border-radius: 2px;
+                min-height: 20px;
+            }
+
+            &__price-icon,
+            &__delivery-icon {
+                background: $color-yellow;
+                height: 20px;
+                width: 20px;
+            }
+
+            &__price-row,
+            &__delivery-way {
+                margin-left: 8px;
+            }
+
+            &__delivery-way {
+                font-size: 12px;
+            }
+
+            &__price-icon svg {
+                width: 8px;
+                height: 9px;
+            }
+
+            &__delivery-icon svg {
+                width: 16px;
+                height: 10px;
+            }
+        }
     }
 }

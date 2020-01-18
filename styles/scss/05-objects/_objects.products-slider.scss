@@ -2,6 +2,7 @@
     background: $white;
     padding: 10px 20px;
     box-shadow: 0px 0px 10px #00000014;
+    position: relative;
 
     &__title {
         color: $color-dark-1;
@@ -15,6 +16,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 4px;
+        padding-right: 80px;
     }
 
     &__view-all {
@@ -23,44 +25,19 @@
         box-shadow: 0px 1px 3px #00000029;
         color: $white;
         background: $color-green;
-        padding: 4px 45px;
+        padding: 5px 45px;
         font-size: 14px;
         line-height: 19px;
         text-align: center;
         letter-spacing: 0;
     }
 
-    &__tags {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 5px;
-    }
-
-    &__tags-item {
-        cursor: pointer;
-        margin-right: 20px;
-
-        &--active {
-            svg {
-
-                .border,
-                .text {
-                    fill: $color-orange;
-                }
-
-                .circle {
-                    stroke: $color-orange;
-                }
-            }
-        }
-    }
-
     &__container {
         margin: 0 auto;
-        position: relative;
         padding: 0;
         z-index: 1;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     &__wrapper {
@@ -70,5 +47,40 @@
         z-index: 1;
         display: flex;
         transition-property: transform;
+        align-items: flex-end;
+    }
+
+    &__item {
+        margin-bottom: 5px;
+    }
+
+    &__arrow {
+        width: 27px;
+        height: 27px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $white;
+        box-shadow: 0px 1px 3px #00000029;
+        border-radius: 2px;
+        position: absolute;
+        top: 10px;
+        cursor: pointer;
+
+        svg {
+            stroke: $color-green;
+        }
+
+        &--next {
+            right: 20px;
+        }
+
+        &--prev {
+            right: 20px + 27px + 10px;
+
+            svg {
+                transform: rotate(-180deg);
+            }
+        }
     }
 }

@@ -2,9 +2,15 @@
     @include make-col-ready();
 }
 
-.u-col--md-2 {
+.u-col--md-3 {
     @include media-breakpoint-up(md) {
-        @include make-col(2)
+        @include make-col(3)
+    }
+}
+
+.u-col--md-9 {
+    @include media-breakpoint-up(md) {
+        @include make-col(9)
     }
 }
 
@@ -17,11 +23,5 @@
 .u-col--header {
     @include media-breakpoint-up(md) {
         @include make-col(9.7)
-    }
-}
-
-.u-col--md-10 {
-    @include media-breakpoint-up(md) {
-        @include make-col(10)
     }
 }

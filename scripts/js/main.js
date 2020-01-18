@@ -39,3 +39,20 @@ selected.forEach(function (element) {
     });
   });
 });
+
+var videosSliderTrendingCreators = new Swiper('.o-products-slider__container', {
+  slidesPerView: 6,
+  spaceBetween: 28.5,
+  wrapperClass: 'o-products-slider__wrapper',
+  slideClass: 'o-products-slider__item ',
+  slideActiveClass: 'o-products-slider__item--slide-active',
+  navigation: {
+      nextEl: '.o-products-slider__arrow--next',
+      prevEl: '.o-products-slider__arrow--prev',
+  },
+  breakpoints: {
+    768: {
+      spaceBetween: 10,
+    },
+  },
+})
