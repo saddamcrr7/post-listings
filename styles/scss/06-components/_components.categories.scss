@@ -1,0 +1,47 @@
+.c-categories {
+    $root: &;
+
+    width: 100%;
+    height: 100%;
+    padding: 17px 30px;
+    background: $white;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px #00000014;
+
+    &__title {
+        font-size: 13px;
+        font-family: $RobotoCondensedFontFamily;
+        font-weight: $font-weight-bold;
+    }
+
+    &__list {
+        margin-top: 17px;
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    &__item-name {
+        font-size: 13px;
+        margin-left: 10px;
+        color: $color-dark-1;
+        font-family: $RobotoCondensedFontFamily;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 18px;
+
+        &--active, &:hover {
+            #{$root}__item-icon svg {
+                fill:  $color-green;
+            }
+
+            #{$root}__item-name {
+                color: $color-green;
+            }
+        }
+    }
+}
