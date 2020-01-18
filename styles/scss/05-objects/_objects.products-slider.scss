@@ -1,0 +1,58 @@
+.o-products-slider {
+    background: $white;
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 10px #00000014;
+
+    &__title {
+        color: $color-dark-1;
+        font-size: 13px;
+        font-weight: $font-weight-bold;
+        font-family: $RobotoCondensedFontFamily;
+    }
+
+    &__top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 4px;
+    }
+
+    &__view-all {
+        border: none;
+        border-radius: 2px;
+        box-shadow: 0px 1px 3px #00000029;
+        color: $white;
+        background: $color-green;
+        padding: 4px 45px;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 0;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+    }
+
+    &__tags-item {
+        cursor: pointer;
+        margin-right: 20px;
+
+        &--active {
+            svg {
+
+                .border,
+                .text {
+                    fill: $color-orange;
+                }
+
+                .circle {
+                    stroke: $color-orange;
+                }
+            }
+        }
+    }
+}

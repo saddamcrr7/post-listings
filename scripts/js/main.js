@@ -17,11 +17,11 @@ selected.forEach(function (element) {
     if (optionsOpen == 0) {
       options.style.height = "".concat(optionsHeight, "px");
       options.style.bottom = "-".concat(optionsHeight, "px");
-      filterIcon.style.transform = "rotate(-90deg)";
+      filterIcon.style.transform = "rotate(-180deg) translateY(50%)";
       optionsOpen = !0;
     } else {
       options.style.height = "0px";
-      filterIcon.style.transform = "rotate(90deg)";
+      filterIcon.style.transform = "rotate(0deg) translateY(-50%)";
       optionsOpen = 0;
     }
   }

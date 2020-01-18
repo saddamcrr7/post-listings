@@ -666,6 +666,63 @@ a:hover, a:active, a:focus {
   border-top: 2px solid #40BC37;
 }
 
+.o-products-slider {
+  background: #fff;
+  margin-bottom: 40px;
+  padding: 10px 20px;
+  -webkit-box-shadow: 0px 0px 10px #00000014;
+          box-shadow: 0px 0px 10px #00000014;
+}
+.o-products-slider__title {
+  color: #2F323E;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.o-products-slider__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4px;
+}
+.o-products-slider__view-all {
+  border: none;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px #00000029;
+          box-shadow: 0px 1px 3px #00000029;
+  color: #fff;
+  background: #40BC37;
+  padding: 4px 45px;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0;
+}
+.o-products-slider__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+.o-products-slider__tags-item {
+  cursor: pointer;
+  margin-right: 20px;
+}
+.o-products-slider__tags-item--active svg .border,
+.o-products-slider__tags-item--active svg .text {
+  fill: #F87C00;
+}
+.o-products-slider__tags-item--active svg .circle {
+  stroke: #F87C00;
+}
+
 .c-nav {
   width: 100%;
   padding-right: 10px;
@@ -793,6 +850,14 @@ a:hover, a:active, a:focus {
   height: 0px;
   overflow: hidden;
   z-index: 1001;
+}
+.c-input-select__icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 5;
 }
 
 .c-search {

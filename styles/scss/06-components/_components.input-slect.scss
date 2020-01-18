@@ -11,4 +11,12 @@
         overflow: hidden;
         z-index: map-get($z-layers, select-options);
     }
+
+    &__icon {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+    }
 }
