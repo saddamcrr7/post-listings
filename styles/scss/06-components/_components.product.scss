@@ -171,6 +171,7 @@
     }
 
     &--medium {
+        max-width: 149px;
         flex: 0 0 149px;
         flex-wrap: wrap;
         @include hideCnotentForSmMd($root);

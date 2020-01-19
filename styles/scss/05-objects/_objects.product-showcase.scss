@@ -1,0 +1,16 @@
+.o-product-showcase {
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -20px;
+        margin-right: -20px;
+
+        .c-product--medium {
+            position: relative;
+            width: 100%;
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+    }
+}
