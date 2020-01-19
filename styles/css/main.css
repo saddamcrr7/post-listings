@@ -866,6 +866,12 @@ a:hover, a:active, a:focus {
   -o-object-position: center;
      object-position: center;
 }
+.o-ad--wide .o-ad__container,
+.o-ad--wide .o-ad__title {
+  max-width: 728px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .c-nav {
   width: 100%;
