@@ -843,6 +843,30 @@ a:hover, a:active, a:focus {
   margin-bottom: 30px;
 }
 
+.o-ad {
+  padding: 30px;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 10px #00000014;
+          box-shadow: 0px 0px 10px #00000014;
+}
+.o-ad__title {
+  font-size: 13px;
+  color: #707070;
+  margin-bottom: 8px;
+}
+.o-ad__container {
+  width: 100%;
+  height: 100%;
+}
+.o-ad__container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 .c-nav {
   width: 100%;
   padding-right: 10px;
@@ -1436,6 +1460,18 @@ a:hover, a:active, a:focus {
             flex: 0 0 80.8333333333%;
     max-width: 80.8333333333%;
   }
+}
+
+.u-mt-20 {
+  margin-top: 20px;
+}
+
+.u-mt-30 {
+  margin-top: 30px;
+}
+
+.u-mt-40 {
+  margin-top: 40px;
 }
 
 /*# sourceMappingURL=main.css.map */
