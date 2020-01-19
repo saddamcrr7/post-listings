@@ -979,6 +979,9 @@ a:hover, a:active, a:focus {
 .c-product__tag {
   cursor: pointer;
   margin-right: 20px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .c-product__tag--active svg .border,
 .c-product__tag--active svg .text {
@@ -986,6 +989,9 @@ a:hover, a:active, a:focus {
 }
 .c-product__tag--active svg .circle {
   stroke: #F87C00;
+}
+.c-product:hover .c-product__tag, .c-product:active .c-product__tag, .c-product:focus .c-product__tag {
+  opacity: 1;
 }
 .c-product__top {
   display: -webkit-box;

@@ -16,6 +16,8 @@
     &__tag {
         cursor: pointer;
         margin-right: 20px;
+        opacity: 0;
+        @include basic-transition(opacity);
 
         &--active {
             svg {
@@ -29,6 +31,12 @@
                     stroke: $color-orange;
                 }
             }
+        }
+    }
+
+    @include on-event() {
+        #{$root}__tag {
+            opacity: 1;
         }
     }
 
