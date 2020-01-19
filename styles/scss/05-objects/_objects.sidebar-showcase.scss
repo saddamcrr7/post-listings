@@ -1,0 +1,31 @@
+.o-siderbar-showcase {
+    padding: 22px 25px;
+    background: $white;
+    box-shadow: 0px 0px 10px #00000014;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $grid-gutter-width;
+    }
+
+    &__title {
+        color: $color-dark-1;
+        font-size: 13px;
+        font-weight: $font-weight-bold;
+        font-family: $RobotoCondensedFontFamily;
+    }
+
+    &__btn {
+        color: $color-green;
+        font-size: 11px;
+        cursor: pointer;
+        font-weight: $font-weight-medium;
+        font-family: $RobotoCondensedFontFamily;
+    }
+
+    .c-product {
+        margin-bottom: 20px;
+    }
+}

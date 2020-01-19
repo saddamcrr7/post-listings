@@ -853,6 +853,41 @@ a:hover, a:active, a:focus {
   margin-bottom: 30px;
 }
 
+.o-siderbar-showcase {
+  padding: 22px 25px;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 10px #00000014;
+          box-shadow: 0px 0px 10px #00000014;
+}
+.o-siderbar-showcase__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+.o-siderbar-showcase__title {
+  color: #2F323E;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.o-siderbar-showcase__btn {
+  color: #40BC37;
+  font-size: 11px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.o-siderbar-showcase .c-product {
+  margin-bottom: 20px;
+}
+
 .o-ad {
   padding: 30px;
   background: #fff;
