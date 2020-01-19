@@ -1,6 +1,14 @@
 .c-input-select {
     position: relative;
     cursor: pointer;
+    width: 172px;
+    padding: 9px 12px;
+    font-size: 11px;
+    font-family: $OpenSansFontFamily;
+    color: $color-select-input-text;
+    background: $color-select-input-bg;
+    border-radius: 5px;
+    border: 1px solid #E2E2E2;;
 
     &__options {
         position: absolute;

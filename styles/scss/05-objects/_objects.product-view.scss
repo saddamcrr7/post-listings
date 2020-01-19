@@ -8,6 +8,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__top-right {
+        display: flex;
     }
 
     &__title {
@@ -15,5 +20,43 @@
         font-size: 13px;
         font-weight: $font-weight-bold;
         font-family: $RobotoCondensedFontFamily;
+    }
+
+    &__sort {
+        display: flex;
+        align-items: center;
+    }
+
+    &__style {
+        display: flex;
+        align-items: center;
+        margin-left: 60px;
+    }
+
+    &__style-text, &__sort-text {
+        color: #989898;
+        font-size: 13px;
+        font-family: $RobotoCondensedFontFamily;
+    }
+
+    &__sort-text {
+        margin-right: 10px;
+    }
+
+    &__style-list, &__style-grid {
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    &__style-list {
+
+    }
+
+    &__style-grid {
+
+    }
+
+    &__grid {
+
     }
 }
