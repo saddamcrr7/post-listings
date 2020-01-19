@@ -23,6 +23,13 @@
     }
 
     &--wide {
+        padding: {
+            top: 15px;
+            bottom: 15px;
+        }
+
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 5px;
 
         #{$root}__container,
         #{$root}__title {

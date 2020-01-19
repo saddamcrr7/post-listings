@@ -866,6 +866,13 @@ a:hover, a:active, a:focus {
   -o-object-position: center;
      object-position: center;
 }
+.o-ad--wide {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+  border-radius: 5px;
+}
 .o-ad--wide .o-ad__container,
 .o-ad--wide .o-ad__title {
   max-width: 728px;
