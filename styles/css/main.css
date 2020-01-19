@@ -1391,6 +1391,54 @@ a:hover, a:active, a:focus {
   color: #40BC37;
 }
 
+.c-pagination__container {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 150px;
+}
+.c-pagination__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.c-pagination__arrow {
+  padding: 5px;
+  cursor: pointer;
+}
+.c-pagination__arrow--prev svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.c-pagination__arrow svg {
+  width: 7px;
+  height: 12px;
+  stroke: #707070;
+}
+.c-pagination__page-of {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+}
+.c-pagination__number {
+  width: 23px;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  line-height: 23px;
+  cursor: pointer;
+}
+.c-pagination__number--active {
+  border: 1px solid #2F323E;
+}
+
 .u-clearfix:after {
   content: '' !important;
   display: block !important;

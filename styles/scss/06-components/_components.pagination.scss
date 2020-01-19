@@ -1,0 +1,47 @@
+.c-pagination {
+    &__container {
+        @include make-container();
+        max-width: 150px;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__arrow {
+        padding: 5px;
+        cursor: pointer;
+
+        &--prev {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        svg {
+            width: 7px;
+            height: 12px;
+            stroke: #707070;
+        }
+    }
+
+    &__page-of{
+        font-size: 12px;
+        font-family: $OpenSansFontFamily;
+    }
+
+    &__number {
+        width: 23px;
+        font-size: 12px;
+        font-family: $OpenSansFontFamily;
+        text-align: center;
+        line-height: 23px;
+        cursor: pointer;
+
+        &--active {
+            border: 1px solid $color-dark-1;
+        }
+    }
+}
