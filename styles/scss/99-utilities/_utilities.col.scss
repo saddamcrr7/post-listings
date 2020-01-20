@@ -2,15 +2,15 @@
     @include make-col-ready();
 }
 
-.u-col--md-3 {
+.u-col--md-3_5 {
     @include media-breakpoint-up(md) {
-        @include make-col(3)
+        @include make-col(3.5)
     }
 }
 
-.u-col--md-9 {
+.u-col--md-8_5 {
     @include media-breakpoint-up(md) {
-        @include make-col(9)
+        @include make-col(8.5)
     }
 }
 

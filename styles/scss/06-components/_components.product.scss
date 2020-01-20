@@ -78,7 +78,9 @@
         margin-top: 3px;
     }
 
-    &__inbox, &__share, &__like {
+    &__inbox,
+    &__share,
+    &__like {
         width: 30px;
         height: 30px;
         display: flex;
@@ -243,7 +245,7 @@
 
             &__thumb {
                 height: 133px;
-                flex:  0 0 149px;
+                flex: 0 0 149px;
                 margin-right: 40px;
             }
 
@@ -310,6 +312,77 @@
             &__delivery-icon svg {
                 width: 23px;
                 height: 14px;
+            }
+        }
+    }
+
+    &--small {
+        #{$root} {
+            &__thumb {
+                max-width: 111px;
+                flex: 0 0 111px;
+                height: 99px;
+                margin-right: 10px;
+            }
+
+            &__delete {
+                cursor: pointer;
+            }
+
+            &__tag {
+                margin: 0;
+            }
+
+            &__title {
+                font-size: 12px;
+            }
+
+            &__meta {
+                font-size: 11px;
+            }
+
+            &__meta-name {
+                padding-right: 5px;
+                margin-right: 5px;
+                border-right: 1px solid #707070;
+            }
+
+            &__price {
+                margin-bottom: 6px;
+            }
+
+            &__delivery,
+            &__price {
+                width: 100%;
+                background: $white;
+                border-radius: 2px;
+                min-height: 20px;
+            }
+
+            &__price-icon,
+            &__delivery-icon {
+                background: $color-yellow;
+                height: 20px;
+                width: 20px;
+            }
+
+            &__price-row,
+            &__delivery-way {
+                margin-left: 8px;
+            }
+
+            &__delivery-way {
+                font-size: 12px;
+            }
+
+            &__price-icon svg {
+                width: 8px;
+                height: 9px;
+            }
+
+            &__delivery-icon svg {
+                width: 16px;
+                height: 10px;
             }
         }
     }
