@@ -28,6 +28,7 @@
         color: $color-yellow;
         font-size: 13px;
         font-family: $RobotoCondensedFontFamily;
+        cursor: pointer;
     }
 
     &__form {
@@ -40,9 +41,28 @@
         width: 100%;
         height: 182px;
         display: block;
+        background: $color-select-input-bg;
+        border: 2px solid #E2E2E2;
+        border-radius: 5px;
+        padding: 15px;
+        color:  #232323;;
+        font-size: 13px;
+        font-family: $OpenSansFontFamily;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     &__form-btn {
+        color: $white;
+        background: $color-green;
+        border: none;
+        border-radius: 2px;
         margin-top: 20px;
+        font-size: 13px;
+        font-family: $OpenSansFontFamily;
+        font-weight: $font-weight-medium;
+        padding: 8px 99px;
     }
 }

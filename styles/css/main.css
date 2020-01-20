@@ -957,6 +957,7 @@ a:hover, a:active, a:focus {
   color: #FEC200;
   font-size: 13px;
   font-family: "Roboto Condensed", sans-serif;
+  cursor: pointer;
 }
 .o-contact-seller__form {
   width: 100%;
@@ -967,9 +968,27 @@ a:hover, a:active, a:focus {
   width: 100%;
   height: 182px;
   display: block;
+  background: #F9F9FB;
+  border: 2px solid #E2E2E2;
+  border-radius: 5px;
+  padding: 15px;
+  color: #232323;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+}
+.o-contact-seller__form-input:focus {
+  outline: none;
 }
 .o-contact-seller__form-btn {
+  color: #fff;
+  background: #40BC37;
+  border: none;
+  border-radius: 2px;
   margin-top: 20px;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  padding: 8px 99px;
 }
 
 .c-nav {
