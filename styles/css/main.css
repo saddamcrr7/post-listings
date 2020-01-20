@@ -1200,8 +1200,12 @@ a:hover, a:active, a:focus {
 .c-product__inbox:not(.c-product__inbox), .c-product__share:not(.c-product__inbox), .c-product__like:not(.c-product__inbox) {
   margin-left: 10px;
 }
-.c-product__inbox svg, .c-product__share svg, .c-product__like svg {
+.c-product__inbox:not(.c-product__like) svg, .c-product__share:not(.c-product__like) svg, .c-product__like:not(.c-product__like) svg {
   fill: #12BE54;
+}
+.c-product__like svg {
+  fill: none;
+  stroke: #12BE54;
 }
 .c-product__row {
   display: -webkit-box;

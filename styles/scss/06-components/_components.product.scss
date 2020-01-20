@@ -94,9 +94,14 @@
             margin-left: 10px;
         }
 
-        svg {
+        &:not(.c-product__like) svg {
             fill: $color-green-2;
         }
+    }
+
+    &__like svg {
+        fill: none;
+        stroke: $color-green-2;
     }
 
     &__row {
