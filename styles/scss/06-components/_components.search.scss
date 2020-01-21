@@ -21,6 +21,12 @@
         max-width: 310px;
         width: 100%;
         margin-right: 50px;
+        border: 1px solid transparent;
+
+        &:focus {
+            outline: none;
+            border: 1px solid $color-gray-green;
+        }
     }
 
     &__button {
@@ -32,5 +38,18 @@
         padding: 14px 56px;
         background: $color-green;
         font-family: $RobotoCondensedFontFamily;
+    }
+
+    .c-input-select__options-item {
+        padding: 10px 25px;
+        background: $white;
+
+        &:nth-child(odd) {
+            background: #f1f1f1;
+        }
+
+        @include on-event {
+            color: $color-dark;
+        }
     }
 }

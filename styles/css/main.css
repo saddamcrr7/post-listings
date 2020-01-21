@@ -1157,12 +1157,47 @@ a:hover, a:active, a:focus {
 }
 .c-input-select__options {
   position: absolute;
-  bottom: -55px;
+  top: 100%;
   left: 0;
   right: 0;
   height: 0px;
   overflow: hidden;
   z-index: 1001;
+  -webkit-transition: height 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: height 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.c-input-select__options-item, .c-input-select__options-sub-item {
+  position: relative;
+}
+.c-input-select__options-item:hover .c-input-select__options-sub, .c-input-select__options-sub-item:hover .c-input-select__options-sub, .c-input-select__options-item:active .c-input-select__options-sub, .c-input-select__options-sub-item:active .c-input-select__options-sub, .c-input-select__options-item:focus .c-input-select__options-sub, .c-input-select__options-sub-item:focus .c-input-select__options-sub {
+  display: block;
+}
+.c-input-select__options-item.has-sub-item::after, .has-sub-item.c-input-select__options-sub-item::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+  border: solid #707070;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.c-input-select__options-sub {
+  position: absolute;
+  top: 20px;
+  left: 100%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  display: none;
 }
 .c-input-select__icon {
   position: absolute;
@@ -1204,6 +1239,11 @@ a:hover, a:active, a:focus {
   max-width: 310px;
   width: 100%;
   margin-right: 50px;
+  border: 1px solid transparent;
+}
+.c-search__input:focus {
+  outline: none;
+  border: 1px solid #E4F3EC;
 }
 .c-search__button {
   font-size: 13px;
@@ -1214,6 +1254,16 @@ a:hover, a:active, a:focus {
   padding: 14px 56px;
   background: #40BC37;
   font-family: "Roboto Condensed", sans-serif;
+}
+.c-search .c-input-select__options-item, .c-search .c-input-select__options-sub-item {
+  padding: 10px 25px;
+  background: #fff;
+}
+.c-search .c-input-select__options-item:nth-child(odd), .c-search .c-input-select__options-sub-item:nth-child(odd) {
+  background: #f1f1f1;
+}
+.c-search .c-input-select__options-item:hover, .c-search .c-input-select__options-sub-item:hover, .c-search .c-input-select__options-item:active, .c-search .c-input-select__options-sub-item:active, .c-search .c-input-select__options-item:focus, .c-search .c-input-select__options-sub-item:focus {
+  color: #363636;
 }
 
 .c-product {
