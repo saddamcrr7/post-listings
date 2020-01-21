@@ -1717,13 +1717,16 @@ a:hover, a:active, a:focus {
       -ms-flex-align: center;
           align-items: center;
 }
-.c-breadcrumb, .c-breadcrumb__item {
-  margin: 0 5px;
-}
 .c-breadcrumb, .c-breadcrumb a, .c-breadcrumb__item, .c-breadcrumb__item a {
   font-size: 13px;
   font-weight: 400;
   color: #FEC200;
+}
+.c-breadcrumb__item {
+  margin: 0 5px;
+}
+.c-breadcrumb__item:first-child {
+  margin-left: 0;
 }
 .c-breadcrumb__item--active {
   pointer-events: none;

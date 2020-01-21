@@ -10,10 +10,17 @@
             color: $color-yellow;
         }
 
-        margin: 0 5px;
     }
 
-    &__item--active {
-        pointer-events: none;
+    &__item {
+        margin: 0 5px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &--active {
+            pointer-events: none;
+        }
     }
 }
