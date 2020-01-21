@@ -1045,13 +1045,17 @@ a:hover, a:active, a:focus {
 .c-nav__navbar-item--user svg {
   margin-left: 8px;
 }
+.c-nav__navbar-item--dropdown {
+  position: relative;
+}
 .c-nav__navbar-item--dropdown svg {
   fill: rgba(255, 255, 255, 0.5);
   margin-left: 5px;
   margin-bottom: 2px;
 }
-.c-nav__navbar-item--dropdown .c-nav__navbar-link {
+.c-nav__navbar-item--dropdown > .c-nav__navbar-link {
   line-height: 15px;
+  height: 56px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1059,8 +1063,14 @@ a:hover, a:active, a:focus {
       -ms-flex-align: center;
           align-items: center;
 }
-.c-nav__navbar-item--dropdown .c-nav__navbar-link:hover svg, .c-nav__navbar-item--dropdown .c-nav__navbar-link:active svg, .c-nav__navbar-item--dropdown .c-nav__navbar-link:focus svg {
+.c-nav__navbar-item--dropdown > .c-nav__navbar-link:hover svg, .c-nav__navbar-item--dropdown > .c-nav__navbar-link:active svg, .c-nav__navbar-item--dropdown > .c-nav__navbar-link:focus svg {
   fill: #fff;
+}
+.c-nav__navbar-item--dropdown > .c-nav__navbar-link:hover::before, .c-nav__navbar-item--dropdown > .c-nav__navbar-link:active::before, .c-nav__navbar-item--dropdown > .c-nav__navbar-link:focus::before {
+  bottom: -2px;
+}
+.c-nav__navbar-item--dropdown:hover .c-nav__navbar-dropdown, .c-nav__navbar-item--dropdown:active .c-nav__navbar-dropdown, .c-nav__navbar-item--dropdown:focus .c-nav__navbar-dropdown {
+  visibility: visible;
 }
 .c-nav__navbar-item--user svg {
   fill: #fff;
@@ -1073,11 +1083,7 @@ a:hover, a:active, a:focus {
   position: relative;
   padding: 5px;
 }
-.c-nav__navbar-link:hover, .c-nav__navbar-link:active, .c-nav__navbar-link:focus {
-  color: #fff;
-  text-decoration: none;
-}
-.c-nav__navbar-link:hover:not(.c-nav__navbar-link--user):not(.c-nav__navbar-link--massages):not(.c-nav__navbar-link--notification)::before, .c-nav__navbar-link:active:not(.c-nav__navbar-link--user):not(.c-nav__navbar-link--massages):not(.c-nav__navbar-link--notification)::before, .c-nav__navbar-link:focus:not(.c-nav__navbar-link--user):not(.c-nav__navbar-link--massages):not(.c-nav__navbar-link--notification)::before {
+.c-nav__navbar-link::before {
   content: '';
   position: absolute;
   left: 0;
@@ -1086,6 +1092,14 @@ a:hover, a:active, a:focus {
   height: 5px;
   border-radius: 5px;
   background: #fff;
+  opacity: 0;
+}
+.c-nav__navbar-link:hover, .c-nav__navbar-link:active, .c-nav__navbar-link:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.c-nav__navbar-link:hover:not(.c-nav__navbar-link--user):not(.c-nav__navbar-link--massages):not(.c-nav__navbar-link--notification)::before, .c-nav__navbar-link:active:not(.c-nav__navbar-link--user):not(.c-nav__navbar-link--massages):not(.c-nav__navbar-link--notification)::before, .c-nav__navbar-link:focus:not(.c-nav__navbar-link--user):not(.c-nav__navbar-link--massages):not(.c-nav__navbar-link--notification)::before {
+  opacity: 1;
 }
 .c-nav__navbar-link--user {
   display: -webkit-box;
@@ -1104,6 +1118,29 @@ a:hover, a:active, a:focus {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+.c-nav__navbar-dropdown {
+  position: absolute;
+  top: 58px;
+  left: -50%;
+  list-style: none;
+  background: #F87C00;
+  -webkit-box-shadow: 0px 0px 10px #00000014;
+          box-shadow: 0px 0px 10px #00000014;
+  padding: 10px;
+  margin-bottom: 0;
+  z-index: 1006;
+  min-width: 200px;
+  visibility: collapse;
+}
+.c-nav__navbar-dropdown-item {
+  margin-bottom: 5px;
+}
+.c-nav__navbar-dropdown-link {
+  padding: 5px;
+}
+.c-nav__navbar-dropdown-link::before {
+  display: none;
 }
 
 .c-input-select {

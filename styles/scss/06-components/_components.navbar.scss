@@ -44,14 +44,17 @@ $nav-item-padding: 5px;
         }
 
         &--dropdown {
+            position: relative;
+
             svg {
                 fill: rgba($white, .50);
                 margin-left: 5px;
                 margin-bottom: 2px;
             }
 
-            #{$root}__navbar-link {
+            & > #{$root}__navbar-link {
                 line-height: 15px;
+                height: 56px;
                 display: flex;
                 align-items: center;
 
@@ -59,6 +62,16 @@ $nav-item-padding: 5px;
                     svg {
                         fill: $white;
                     }
+
+                    &::before {
+                        bottom: -2px;
+                    }
+                }
+            }
+
+            @include on-event() {
+                #{$root}__navbar-dropdown {
+                    visibility: visible;
                 }
             }
         }
@@ -78,20 +91,25 @@ $nav-item-padding: 5px;
         position: relative;
         padding: $nav-item-padding;
 
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -18px;
+            height: 5px;
+            border-radius: 5px;
+            background: $white;
+            opacity: 0;
+        }
+
         @include on-event {
             color: $white;
             text-decoration: none;
 
             &:not(.c-nav__navbar-link--user):not(.c-nav__navbar-link--massages):not(.c-nav__navbar-link--notification) {
                 &::before {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    bottom: -18px;
-                    height: 5px;
-                    border-radius: 5px;
-                    background: $white;
+                    opacity: 1;
                 }
             }
 
@@ -110,6 +128,32 @@ $nav-item-padding: 5px;
                 height: 100%;
                 @include object-fit(cover);
             }
+        }
+    }
+
+    &__navbar-dropdown {
+        position: absolute;
+        top: 58px;
+        left: -50%;
+        list-style: none;
+        background: $color-orange;
+        box-shadow: 0px 0px 10px #00000014;
+        padding: 10px;
+        margin-bottom: 0;
+        z-index: map-get($z-layers, drop-down);
+        min-width: 200px;
+        visibility: collapse;
+    }
+
+    &__navbar-dropdown-item {
+        margin-bottom: 5px;
+    }
+
+    &__navbar-dropdown-link {
+        padding: 5px;
+
+        &::before {
+            display: none;
         }
     }
 }
