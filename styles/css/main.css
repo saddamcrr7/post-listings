@@ -1707,6 +1707,28 @@ a:hover, a:active, a:focus {
   border: 1px solid #2F323E;
 }
 
+.c-breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.c-breadcrumb, .c-breadcrumb__item {
+  margin: 0 5px;
+}
+.c-breadcrumb, .c-breadcrumb a, .c-breadcrumb__item, .c-breadcrumb__item a {
+  font-size: 13px;
+  font-weight: 400;
+  color: #FEC200;
+}
+.c-breadcrumb__item--active {
+  pointer-events: none;
+}
+
 .u-clearfix:after {
   content: '' !important;
   display: block !important;

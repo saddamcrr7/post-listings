@@ -1,0 +1,19 @@
+.c-breadcrumb  {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    &, &__item  {
+        &, a {
+            font-size: 13px;
+            font-weight: $font-weight-normal;
+            color: $color-yellow;
+        }
+
+        margin: 0 5px;
+    }
+
+    &__item--active {
+        pointer-events: none;
+    }
+}
