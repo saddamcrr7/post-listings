@@ -1,0 +1,12 @@
+.o-product-gallery {
+    width: 100%;
+
+    &__row {
+        display: flex;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
