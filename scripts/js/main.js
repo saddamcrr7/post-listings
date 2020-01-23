@@ -101,3 +101,55 @@ if (productView) {
     });
   });
 }
+
+var chartCanvas = document.querySelector('.o-single-product__chart-canvas')
+
+if (chartCanvas) {
+  new Chart(chartCanvas, {
+    type: 'line',
+    data: {
+      labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      datasets: [{
+        data: [90, 100, 40, 70, 90, 11, 90, 5, 110, 100, 90, 120, 50, 100, 10, 100, 90, 120, 90, 100, 50, 100, 90, 120, ],
+        label: "Africa",
+        borderColor: "#3e95cd",
+        fill: false
+      }]
+    },
+    layout: {
+
+    },
+    options: {
+      title: {
+        // display: false,
+      },
+
+      legend: {
+        display: false
+      },
+
+      scales: {
+        xAxes: [{
+          gridLines: {
+            // display: false
+          },
+          ticks: {
+            // display: false,
+            beginAtZero:true
+
+          },
+        }],
+        yAxes: [{
+          gridLines: {
+            // display: false
+          },
+          ticks: {
+            // display: false
+            beginAtZero:true
+          }
+        }]
+      },
+
+    }
+  });
+}
