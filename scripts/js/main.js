@@ -108,21 +108,25 @@ if (chartCanvas) {
   new Chart(chartCanvas, {
     type: 'line',
     data: {
-      labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10", "Day 11", "Day 12", "Day 13", "Day 14"],
       datasets: [{
-        data: [90, 100, 40, 70, 90, 11, 90, 5, 110, 100, 90, 120, 50, 100, 10, 100, 90, 120, 90, 100, 50, 100, 90, 120, ],
-        label: "Africa",
+        data: [0, 20, 40, 70, 90, 11, 90, 5, 110, 100, 90, 118, 50, 100, 10, 100, 90, 110, 90, 100, 50, 100, 90, 109],
+        label: "Views",
         borderColor: "#3e95cd",
-        fill: false
+        fill: false,
+        borderWidth: 2,
+        backgroundColor: "transparent",
+        borderColor: "#707070",
+        pointBackgroundColor: "#FEC200",
+        pointBorderColor: '#FEC200',
+        pointHoverRadius: 6,
+        pointRadius: 6,
       }]
     },
-    layout: {
-
-    },
+    layout: {},
     options: {
-      title: {
-        // display: false,
-      },
+      responsive: true,
+      maintainAspectRatio: false,
 
       legend: {
         display: false
@@ -131,22 +135,20 @@ if (chartCanvas) {
       scales: {
         xAxes: [{
           gridLines: {
-            // display: false
+            display: false
           },
           ticks: {
-            // display: false,
-            beginAtZero:true
-
+            display: false,
           },
         }],
         yAxes: [{
           gridLines: {
-            // display: false
+            display: false
           },
           ticks: {
-            // display: false
-            beginAtZero:true
-          }
+            display: false,
+            beginAtZero: true
+          },
         }]
       },
 
