@@ -594,7 +594,7 @@ a:hover, a:active, a:focus {
   transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   position: fixed;
-  z-index: 1005;
+  z-index: 1006;
   left: 50%;
   top: 50%;
   display: none;
@@ -1441,6 +1441,62 @@ a:hover, a:active, a:focus {
   background-color: #12BE54;
 }
 
+.o-megamenu {
+  max-width: 1080px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100%;
+  padding: 15px;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: #fff;
+  z-index: 1005;
+  opacity: 0;
+  visibility: collapse;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.o-megamenu__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.o-megamenu__col {
+  position: relative;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  max-width: 25%;
+  margin-bottom: 30px;
+}
+.o-megamenu__title {
+  color: #363636;
+  font-size: 13px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.o-megamenu__item {
+  margin-bottom: 2px;
+}
+.o-megamenu__item-link {
+  color: #363636;
+  font-size: 13px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.o-megamenu__item-link:hover, .o-megamenu__item-link:active, .o-megamenu__item-link:focus {
+  color: #5F617B;
+}
+
 .c-nav {
   width: 100%;
   padding-right: 10px;
@@ -1579,7 +1635,7 @@ a:hover, a:active, a:focus {
           box-shadow: 0px 0px 10px #00000014;
   padding: 10px;
   margin-bottom: 0;
-  z-index: 1006;
+  z-index: 1007;
   min-width: 200px;
   visibility: collapse;
 }
@@ -2074,6 +2130,7 @@ a:hover, a:active, a:focus {
   border-radius: 2px;
   -webkit-box-shadow: 0px 0px 10px #00000014;
           box-shadow: 0px 0px 10px #00000014;
+  position: relative;
 }
 .c-categories__title {
   font-size: 13px;
@@ -2107,6 +2164,10 @@ a:hover, a:active, a:focus {
 }
 .c-categories__item--active .c-categories__item-name, .c-categories__item:hover .c-categories__item-name {
   color: #40BC37;
+}
+.c-categories__item:hover .c-categories__megamenu {
+  opacity: 1;
+  visibility: visible;
 }
 
 .c-pagination__container {
