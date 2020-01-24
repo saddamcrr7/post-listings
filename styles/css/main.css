@@ -825,6 +825,10 @@ a:hover, a:active, a:focus {
   cursor: pointer;
   margin-left: 10px;
 }
+.o-product-view .c-product {
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
 
 .o-product-showcase {
   margin-top: 40px;
