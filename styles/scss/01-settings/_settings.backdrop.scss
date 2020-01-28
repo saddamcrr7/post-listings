@@ -1,0 +1,6 @@
+$backdrop: 0.40;
+$color-backdrop: $color-dark;
+
+@mixin backdrop ($bg: $color-backdrop, $opacity: $backdrop,){
+    background-color: rgba($color-backdrop, 0.40);
+}

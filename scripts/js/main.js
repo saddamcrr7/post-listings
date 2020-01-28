@@ -75,6 +75,8 @@ var productsSlider = new Swiper('.o-products-slider__container', {
     }
   }
 });
+
+
 var productView = document.querySelector('.o-product-view');
 
 if (productView) {
@@ -155,3 +157,29 @@ if (chartCanvas) {
     }
   });
 }
+
+// modal
+
+function modal(openElm, modalElm) {
+  const body = document.querySelector('body')
+  const modal = document.querySelector(`${modalElm}`)
+  const openBtn = document.querySelector(`${openElm}`)
+  const closeBtn  = modal.querySelector('.o-modal__close')
+  
+  function toggleModal(bol) {
+    if(bol) {
+      modal.classList.add('is-active')
+      body.classList.add('is-modal-open')
+    }
+    else {
+      modal.classList.remove('is-active')
+      body.classList.remove('is-modal-open')
+    }
+  }
+   
+  openBtn.addEventListener('click', () => toggleModal(true))
+  closeBtn.addEventListener('click', () => toggleModal(false))
+
+}
+
+modal('.o-single-product__extend-btn', '.o-modal--boost-listing')

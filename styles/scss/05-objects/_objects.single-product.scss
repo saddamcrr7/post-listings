@@ -114,6 +114,7 @@
         font-size: 12px;
         font-family: $RobotoCondensedFontFamily;
     }
+
     &__chart {
         border-left: 1px solid #707070;
         border-bottom: 1px solid #707070;
@@ -137,17 +138,22 @@
         }
     }
 
-    &__exit-btn {
+    &__extend-btn {
         border-radius: 5px;
         color: #212121;
         background-color: $color-yellow;
         font-size: 12px;
         font-family: $RobotoCondensedFontFamily;
         font-weight: $font-weight-bold;
-        ;
+        border: none;
+        outline: none;
         padding: 10px;
         width: 100%;
         text-align: center;
+
+        &:focus {
+            outline: none;
+        }
 
         @include media-breakpoint-up(sm) {
             max-width: 298px;
