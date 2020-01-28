@@ -530,7 +530,6 @@ body {
 }
 body.is-blocked, body.is-modal-open, body.is-gradpanel-open {
   overflow: hidden;
-  padding-right: 20px;
 }
 body.is-nav-mobile-open {
   overflow: hidden;
@@ -1563,6 +1562,102 @@ a:hover, a:active, a:focus {
   color: #5F617B;
 }
 
+.o-boost-plan__title {
+  color: #8D8C95;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.o-boost-plan__payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+.o-boost-plan__payment-text {
+  color: #8D8C95;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+}
+.o-boost-plan__payment-method {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.o-boost-plan__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.o-boost-plan__note {
+  color: #8D8C95;
+  font-size: 11px;
+  line-height: 16px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin-top: 40px;
+}
+.o-boost-plan__more {
+  color: #8D8C95;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+.o-boost-plan__more-cta {
+  color: #FEC200;
+  text-decoration: underline;
+}
+.o-boost-plan__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+.o-boost-plan__terms {
+  color: #8D8C95;
+  font-size: 11px;
+  line-height: 16px;
+  margin-right: 15px;
+}
+.o-boost-plan__terms-cta {
+  text-decoration: underline;
+}
+.o-boost-plan__payment-btn {
+  display: block;
+  padding: 10px 20px;
+  background: #3EC471;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.44px;
+  -webkit-transition: background 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: background 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.o-boost-plan__payment-btn:hover {
+  color: #fff;
+  background: #12BE54;
+}
+
 .c-nav {
   width: 100%;
   padding-right: 10px;
@@ -2314,6 +2409,151 @@ a:hover, a:active, a:focus {
 }
 .c-menu__options {
   display: none;
+}
+
+.c-price-panel {
+  max-width: 310px;
+  width: 100%;
+  border-radius: 10px;
+  background: #fff;
+  border: 0.5px solid #B9B9B9;
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.c-price-panel:last-child {
+  margin-left: 0;
+}
+.c-price-panel__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0.4px;
+}
+.c-price-panel__name-icon {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #7c7d84;
+  border-radius: 12px;
+  margin-right: 10px;
+  -webkit-transition: border-color 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: border-color 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.c-price-panel__name-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: #40BC37;
+  opacity: 0;
+  margin-bottom: 10px;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.c-price-panel__name-text {
+  color: #363636;
+  font-size: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.c-price-panel__visibility {
+  color: #7C7D84;
+  font-size: 11px;
+  letter-spacing: 0;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.c-price-panel__price {
+  width: 100%;
+  padding: 20px;
+  background: rgba(185, 185, 185, 0.2);
+  font-size: 26px;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 20px;
+  color: #12BE54;
+  text-align: center;
+}
+.c-price-panel__bottom {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.c-price-panel__features {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+.c-price-panel__feature {
+  color: #7C7D84;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 10px;
+}
+.c-price-panel__btn {
+  width: 128px;
+  margin-top: 20px;
+  padding: 10px;
+  color: #363636;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  background: #fff;
+  -webkit-box-shadow: 0px 6px 11px #00000029;
+          box-shadow: 0px 6px 11px #00000029;
+  border: 1px solid #423F58;
+  -webkit-transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.c-price-panel__btn:hover {
+  -webkit-box-shadow: 0px 2px 8px #00000029;
+          box-shadow: 0px 2px 8px #00000029;
+}
+.c-price-panel__btn:focus {
+  outline: none;
+}
+.c-price-panel.is-active {
+  border-color: transparent;
+  -webkit-box-shadow: 0px 12px 34px #00000029;
+          box-shadow: 0px 12px 34px #00000029;
+}
+.c-price-panel.is-active .c-price-panel__name-icon {
+  border-color: transparent;
+}
+.c-price-panel.is-active .c-price-panel__name-icon svg {
+  opacity: 1;
+}
+.c-price-panel.is-active .c-price-panel__btn {
+  color: #fff;
+  background: #F87C00;
+  border-color: transparent;
 }
 
 .u-clearfix:after {

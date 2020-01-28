@@ -1,0 +1,90 @@
+.o-boost-plan {
+    &__title {
+        color: #8D8C95;
+        font-size: 15px;
+        font-family: $OpenSansFontFamily;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__payment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    &__payment-text {
+        color: #8D8C95;
+        font-size: 15px;
+        font-family: $OpenSansFontFamily;
+    }
+
+    &__payment-method {
+        display: flex;
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    &__note {
+        color: #8D8C95;
+        font-size: 11px;
+        line-height: 16px;
+        font-family: $OpenSansFontFamily;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    &__more {
+        color: #8D8C95;
+        font-size: 15px;
+        font-family: $OpenSansFontFamily;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    &__more-cta {
+        color: $color-yellow;
+        text-decoration: underline;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    &__terms {
+        color: #8D8C95;
+        font-size: 11px;
+        line-height: 16px;
+        margin-right: 15px;
+    }
+
+    &__terms-cta {
+        text-decoration: underline;
+    }
+
+    &__payment-btn {
+        display: block;
+        padding: 10px 20px;
+        background: $color-green-3;
+        border-radius: 50px;
+        color: $white;
+        font-size: 12px;
+        font-family: $OpenSansFontFamily;
+        letter-spacing: 0.44px;
+        @include basic-transition(background, 0.5s);
+
+        &:hover {
+            color: $white;
+            background: $color-green-2;
+        }
+    }
+}

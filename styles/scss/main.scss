@@ -56,7 +56,8 @@
 @import '05-objects/objects.product-gallery';
 @import '05-objects/objects.single-product';
 @import '05-objects/objects.profile';
-@import '05-objects//objects.megamenu';
+@import '05-objects/objects.megamenu';
+@import '05-objects/objects.boost-plan';
 
 // 06. Components
 @import '06-components/components.alert';
@@ -69,6 +70,7 @@
 @import '06-components/components.pagination';
 @import '06-components/components.breadcrumb';
 @import '06-components/components.menu';
+@import '06-components/components.price-panel';
 
 // 99. Utilities
 @import '99-utilities/utilities.clearfix';

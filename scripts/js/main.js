@@ -59,7 +59,7 @@ if (selected) {
 }
 
 var productsSlider = new Swiper('.o-products-slider__container', {
-  slidesPerView: 6,
+  slidesPerView: 'auto',
   spaceBetween: 28.5,
   wrapperClass: 'o-products-slider__wrapper',
   slideClass: 'o-products-slider__item ',
@@ -71,7 +71,6 @@ var productsSlider = new Swiper('.o-products-slider__container', {
   breakpoints: {
     1200: {
       spaceBetween: 10,
-      slidesPerView: 'auto'
     }
   }
 });
@@ -164,22 +163,34 @@ function modal(openElm, modalElm) {
   const body = document.querySelector('body')
   const modal = document.querySelector(`${modalElm}`)
   const openBtn = document.querySelector(`${openElm}`)
-  const closeBtn  = modal.querySelector('.o-modal__close')
-  
+  const closeBtn = modal.querySelector('.o-modal__close')
+
   function toggleModal(bol) {
-    if(bol) {
+    if (bol) {
       modal.classList.add('is-active')
       body.classList.add('is-modal-open')
-    }
-    else {
+    } else {
       modal.classList.remove('is-active')
       body.classList.remove('is-modal-open')
     }
   }
-   
+
   openBtn.addEventListener('click', () => toggleModal(true))
   closeBtn.addEventListener('click', () => toggleModal(false))
 
 }
 
 modal('.o-single-product__extend-btn', '.o-modal--boost-listing')
+
+
+
+const pricePanels = document.querySelectorAll('.c-price-panel')
+
+pricePanels.forEach(pricePanel => {
+  const pricePanelBtn = pricePanel.querySelector('.c-price-panel__btn')
+
+  pricePanelBtn.addEventListener('click', () => {
+    pricePanels.forEach(pricePanel => pricePanel.classList.remove('is-active'))
+    pricePanel.classList.add('is-active')
+  })
+})
