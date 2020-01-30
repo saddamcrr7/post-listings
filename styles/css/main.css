@@ -1590,6 +1590,13 @@ a:hover, a:active, a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 40px;
+}
+.o-boost-plan__payment-method img {
+  margin-left: 25px;
 }
 .o-boost-plan__row {
   display: -webkit-box;
@@ -2404,11 +2411,68 @@ a:hover, a:active, a:focus {
   pointer-events: none;
 }
 
+.c-menu {
+  position: relative;
+  z-index: 3;
+}
 .c-menu__btn {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
 }
 .c-menu__options {
-  display: none;
+  min-width: 172px;
+  padding: 10px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-top: 5px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+  border: 0.5px solid #09090942;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.c-menu__options::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  border: 1px solid #09090942;
+  border-bottom: none;
+  border-right: none;
+}
+.c-menu__option-item {
+  margin-top: 5px;
+  padding-bottom: 2px;
+  border-bottom: 0.5px solid #09090942;
+}
+.c-menu__option-item,
+.c-menu__option-item a {
+  color: #707070;
+  font-size: 12px;
+}
+.c-menu__option-item a {
+  display: block;
 }
 
 .c-price-panel {

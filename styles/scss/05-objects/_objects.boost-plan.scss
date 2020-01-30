@@ -22,6 +22,12 @@
 
     &__payment-method {
         display: flex;
+        align-items: center;
+        margin-left: 40px;
+
+        img {
+            margin-left: 25px;
+        }
     }
 
     &__row {

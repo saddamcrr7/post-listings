@@ -194,3 +194,31 @@ pricePanels.forEach(pricePanel => {
     pricePanel.classList.add('is-active')
   })
 })
+
+
+
+const menus = document.querySelectorAll('.c-menu')
+
+menus.forEach((menu, i) => {
+  const menuBtn = menu.querySelector('.c-menu__btn')
+  const menuOptions = menu.querySelector('.c-menu__options')
+  let menuOpen = 0
+
+  menuBtn.addEventListener('click', () => {
+    if (menuOpen == 0) {
+      menuOpen = !0
+      menuOptions.style.opacity = '1'
+      menuOptions.style.pointerEvents = 'auto'
+    } else {
+      menuOpen = 0
+      menuOptions.style.opacity = '0'
+      menuOptions.style.pointerEvents = 'none'
+    }
+  })
+
+  menu.addEventListener('mouseleave', () => {
+    menuOpen = 0
+    menuOptions.style.opacity = '0'
+    menuOptions.style.pointerEvents = 'none'
+  })
+})
