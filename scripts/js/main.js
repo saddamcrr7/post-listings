@@ -222,3 +222,13 @@ menus.forEach((menu, i) => {
     menuOptions.style.pointerEvents = 'none'
   })
 })
+
+
+const productGallery = document.querySelector('.o-product-gallery__row')
+
+if(productGallery) {
+  lightGallery(productGallery, {
+    selector: ".o-product-gallery__itemImageLink",
+    download: !1,
+  })
+}
