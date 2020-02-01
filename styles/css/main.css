@@ -3239,6 +3239,10 @@ a:hover, a:active, a:focus {
   margin-bottom: 30px;
 }
 
+.u-mb-40 {
+  margin-bottom: 40px !important;
+}
+
 .u-my-30 {
   margin-top: 30px;
   margin-bottom: 30px;

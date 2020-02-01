@@ -162,22 +162,23 @@ if (chartCanvas) {
 function modal(openElm, modalElm) {
   const body = document.querySelector('body')
   const modal = document.querySelector(`${modalElm}`)
-  const openBtn = document.querySelector(`${openElm}`)
-  const closeBtn = modal.querySelector('.o-modal__close')
+  if (modal) {
+    const openBtn = document.querySelector(`${openElm}`)
+    const closeBtn = modal.querySelector('.o-modal__close')
 
-  function toggleModal(bol) {
-    if (bol) {
-      modal.classList.add('is-active')
-      body.classList.add('is-modal-open')
-    } else {
-      modal.classList.remove('is-active')
-      body.classList.remove('is-modal-open')
+    function toggleModal(bol) {
+      if (bol) {
+        modal.classList.add('is-active')
+        body.classList.add('is-modal-open')
+      } else {
+        modal.classList.remove('is-active')
+        body.classList.remove('is-modal-open')
+      }
     }
+
+    openBtn.addEventListener('click', () => toggleModal(true))
+    closeBtn.addEventListener('click', () => toggleModal(false))
   }
-
-  openBtn.addEventListener('click', () => toggleModal(true))
-  closeBtn.addEventListener('click', () => toggleModal(false))
-
 }
 
 modal('.o-single-product__extend-btn', '.o-modal--boost-listing')
@@ -232,7 +233,6 @@ if (productGallery) {
     download: !1,
   })
 }
-
 
 
 
