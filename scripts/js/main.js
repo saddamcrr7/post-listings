@@ -279,3 +279,57 @@ if (tagsContainers) {
 
   })
 }
+
+
+
+const headerAdvertisements = document.querySelectorAll('.o-header-advertisement')
+
+if (headerAdvertisements) {
+  headerAdvertisements.forEach(headerAdvertisement => {
+    const headerAdvertisementItems = headerAdvertisement.querySelectorAll('.o-header-advertisement__item')
+    const headerAdvertisementViewItems = headerAdvertisement.querySelectorAll('.o-header-advertisement__view-item')
+    let startIndex = 0
+
+    headerAdvertisementItems.forEach((headerAdvertisementItem, i) => {
+      headerAdvertisementItem.addEventListener('click', () => {
+        startIndex = i
+
+        headerAdvertisementViewItems.forEach(headerAdvertisementViewItem => {
+          headerAdvertisementViewItem.classList.remove('is-active')
+        })
+        headerAdvertisementViewItems[i].classList.add('is-active')
+
+
+        headerAdvertisementItems.forEach(headerAdvertisementItem => {
+          headerAdvertisementItem.classList.remove('is-active')
+        })
+        headerAdvertisementItem.classList.add('is-active')
+
+      })
+    })
+
+    const tIndex = headerAdvertisementItems.length || headerAdvertisementViewItems.length
+
+    function autoChnage() {
+      headerAdvertisementViewItems.forEach(headerAdvertisementViewItem => {
+        headerAdvertisementViewItem.classList.remove('is-active')
+      })
+      headerAdvertisementViewItems[startIndex].classList.add('is-active')
+
+      headerAdvertisementItems.forEach(headerAdvertisementItem => {
+        headerAdvertisementItem.classList.remove('is-active')
+      })
+
+      headerAdvertisementItems[startIndex].classList.add('is-active')
+
+      startIndex += 1
+
+      if (startIndex == tIndex)
+        startIndex = 0
+
+    }
+
+    const timer = setInterval(autoChnage, 3000)
+
+  });
+}
