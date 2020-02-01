@@ -2,7 +2,6 @@
 @import "vendor/bootstrap/scss/_functions";
 @import "vendor/bootstrap/scss/_variables";
 @import "vendor/bootstrap/scss/_mixins";
-@import "vendor/light-gallery/sass/lightgallery";
 
 
 // 01. Settings
@@ -16,6 +15,9 @@
 @import '01-settings/settings.typography';
 @import '01-settings/settings.z-layers';
 @import '01-settings/settings.backdrop';
+@import '01-settings/settings.light-gallery';
+@import "vendor/light-gallery/sass/lightgallery";
+
 
 // Optional bootstrap Files
 @import "vendor/bootstrap/scss/_reboot";
@@ -60,6 +62,7 @@
 @import '05-objects/objects.profile';
 @import '05-objects/objects.megamenu';
 @import '05-objects/objects.boost-plan';
+@import '05-objects/objects.terms-conditions';
 
 // 06. Components
 @import '06-components/components.alert';

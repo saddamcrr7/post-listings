@@ -5,7 +5,8 @@ body {
 
   &.is-blocked,
   &.is-modal-open,
-  &.is-gradpanel-open {
+  &.is-gradpanel-open,
+  &.lg-on {
     overflow: hidden;
   }
 

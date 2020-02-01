@@ -30,6 +30,25 @@
         }
     }
 
+    &__payment-method-text {
+        color: $color-green;
+        font-size: 15px;
+        font-family: $OpenSansFontFamily;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 20px;
+            border-right: 2px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: $color-green-2;
+        }
+    }
+
     &__row {
         display: flex;
         flex-wrap: wrap;

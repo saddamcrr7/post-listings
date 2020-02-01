@@ -1,22 +1,23 @@
 // Core variables and mixins
 @import "lg-variables";
 @import "lg-mixins";
-@import "lg-fonts";
+// @import "lg-fonts";
 @import "lg-theme-default";
-@import "lg-thumbnail";
-@import "lg-video";
-@import "lg-autoplay";
-@import "lg-zoom";
-@import "lg-pager";
-@import "lg-fullscreen";
-@import "lg-share";
+// @import "lg-thumbnail";
+// @import "lg-video";
+// @import "lg-autoplay";
+// @import "lg-zoom";
+// @import "lg-pager";
+// @import "lg-fullscreen";
+// @import "lg-share";
 
 // Clearfix
 .group {
     *zoom: 1;
 }
 
-.group:before, .group:after {
+.group:before,
+.group:after {
     display: table;
     content: "";
     line-height: 0;
@@ -28,10 +29,10 @@
 
 // lightgallery core
 .lg-outer {
-    width: 100%;
-    height: 100%;
     position: fixed;
-    top: 0;
+    top: 61px;
+    right: 0;
+    bottom: 0;
     left: 0;
     z-index: $zindex-outer;
     opacity: 0;
@@ -49,7 +50,10 @@
     // Set transition speed and timing function
     &.lg-css3 {
         .lg-item {
-            &.lg-prev-slide, &.lg-next-slide, &.lg-current {
+
+            &.lg-prev-slide,
+            &.lg-next-slide,
+            &.lg-current {
                 @include transition-duration(inherit !important);
                 @include transition-timing-function(inherit !important);
             }
@@ -59,7 +63,10 @@
     // Remove transition while dragging
     &.lg-css3.lg-dragging {
         .lg-item {
-            &.lg-prev-slide, &.lg-next-slide, &.lg-current {
+
+            &.lg-prev-slide,
+            &.lg-next-slide,
+            &.lg-current {
                 @include transition-duration(0s !important);
                 opacity: 1;
             }
@@ -100,21 +107,27 @@
     }
 
     .lg-item {
-        background: url("#{$lg-path-images}/loading.gif") no-repeat scroll center center transparent;
-        display: none !important; 
+        // background: url("#{$lg-path-images}/loading.gif") no-repeat scroll center center transparent;
+        display: none !important;
     }
-    &.lg-css3{
-        .lg-prev-slide, .lg-current, .lg-next-slide{
-            display: inline-block !important; 
-        }
-    }
-    &.lg-css{
-        .lg-current{
-            display: inline-block !important; 
+
+    &.lg-css3 {
+
+        .lg-prev-slide,
+        .lg-current,
+        .lg-next-slide {
+            display: inline-block !important;
         }
     }
 
-    .lg-item, .lg-img-wrap {
+    &.lg-css {
+        .lg-current {
+            display: inline-block !important;
+        }
+    }
+
+    .lg-item,
+    .lg-img-wrap {
         display: inline-block;
         text-align: center;
         position: absolute;
@@ -160,13 +173,17 @@
 
     &.lg-show-after-load {
         .lg-item {
-            .lg-object, .lg-video-play {
+
+            .lg-object,
+            .lg-video-play {
                 opacity: 0;
                 @include transition(opacity 0.15s ease 0s);
             }
 
             &.lg-complete {
-                .lg-object, .lg-video-play {
+
+                .lg-object,
+                .lg-video-play {
                     opacity: 1;
                 }
             }
@@ -178,23 +195,25 @@
         display: none;
     }
 
-    &.lg-hide-download{
-        #lg-download{
+    &.lg-hide-download {
+        #lg-download {
             display: none;
         }
     }
 }
-.lg-backdrop{
+
+.lg-backdrop {
     position: fixed;
-    top: 0;
+    top: 61px;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: $zindex-backdrop;
-    background-color: #000;
+    background-color: $lg-theme;
     opacity: 0;
     @include transition(opacity 0.15s ease 0s);
-    &.in{
+
+    &.in {
         opacity: $backdrop-opacity;
     }
 }
@@ -204,7 +223,10 @@
 
     // Remove all transition effects
     &.lg-no-trans {
-        .lg-prev-slide, .lg-next-slide, .lg-current {
+
+        .lg-prev-slide,
+        .lg-next-slide,
+        .lg-current {
             @include transitionCustom(none 0s ease 0s !important);
         }
     }
@@ -231,7 +253,9 @@
             }
 
             // transition timing property and duration will be over written from javascript
-            &.lg-prev-slide, &.lg-next-slide, &.lg-current {
+            &.lg-prev-slide,
+            &.lg-next-slide,
+            &.lg-current {
                 @include transitionCustom(opacity 0.1s ease 0s);
             }
         }
@@ -256,7 +280,9 @@
                 }
 
                 // transition timing property and duration will be over written from javascript
-                &.lg-prev-slide, &.lg-next-slide, &.lg-current {
+                &.lg-prev-slide,
+                &.lg-next-slide,
+                &.lg-current {
                     @include transitionCustom(transform 1s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.1s ease 0s);
                 }
             }
@@ -282,7 +308,9 @@
                 }
 
                 // transition timing property and duration will be over written from javascript
-                &.lg-prev-slide, &.lg-next-slide, &.lg-current {
+                &.lg-prev-slide,
+                &.lg-next-slide,
+                &.lg-current {
                     @include transitionCustom(left 1s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.1s ease 0s);
                 }
             }
