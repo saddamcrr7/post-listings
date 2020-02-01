@@ -226,9 +226,46 @@ menus.forEach((menu, i) => {
 
 const productGallery = document.querySelector('.o-product-gallery__row')
 
-if(productGallery) {
+if (productGallery) {
   lightGallery(productGallery, {
     selector: ".o-product-gallery__itemImageLink",
     download: !1,
+  })
+}
+
+
+
+
+const tagsContainers = document.querySelectorAll('.o-siderbar-showcase--tag')
+
+if (tagsContainers) {
+  function warning(container) {
+    container.querySelector('.o-siderbar-showcase__products').innerHTML = `<div class='is-no-tag'> You don't have any tagged item</div>`
+  }
+
+  tagsContainers.forEach(tagsContainer => {
+    const clearAllBtn = tagsContainer.querySelector('.o-siderbar-showcase__btn')
+    let products = tagsContainer.querySelectorAll('.c-product')
+
+    clearAllBtn.addEventListener('click', () => {
+      products.forEach(product => {
+        product.remove()
+        warning(tagsContainer)
+      })
+    })
+
+    products.forEach(product => {
+      const deleteBtn = product.querySelector('.c-product__delete')
+      deleteBtn.addEventListener('click', () => {
+        product.remove()
+        products = tagsContainer.querySelectorAll('.c-product')
+
+        if (products.length == 0) {
+          warning(tagsContainer)
+        }
+
+      })
+    })
+
   })
 }

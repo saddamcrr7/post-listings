@@ -1354,6 +1354,11 @@ a:hover, a:active, a:focus {
 .o-siderbar-showcase .c-product {
   margin-bottom: 20px;
 }
+.o-siderbar-showcase .is-no-tag {
+  font-size: 13px;
+  text-align: center;
+  color: #FF2020;
+}
 
 .o-ad {
   padding: 30px;
