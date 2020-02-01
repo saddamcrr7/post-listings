@@ -32,6 +32,13 @@ if (selected) {
     element.addEventListener('click', function () {
       return toggleOptions();
     });
+
+    element.addEventListener('mouseleave', function () {
+      if(optionsOpen) {
+        return toggleOptions();
+      }
+    });
+
     optionItems.forEach(function (item) {
       var subOptionItems = item.querySelectorAll('.c-input-select__options-sub-item');
 
