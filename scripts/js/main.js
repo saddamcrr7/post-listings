@@ -34,7 +34,7 @@ if (selected) {
     });
 
     element.addEventListener('mouseleave', function () {
-      if(optionsOpen) {
+      if (optionsOpen) {
         return toggleOptions();
       }
     });
@@ -255,9 +255,12 @@ if (tagsContainers) {
     let products = tagsContainer.querySelectorAll('.c-product')
 
     clearAllBtn.addEventListener('click', () => {
+      products = tagsContainer.querySelectorAll('.c-product')
       products.forEach(product => {
-        product.remove()
-        warning(tagsContainer)
+        if (products) {
+          product.remove()
+          warning(tagsContainer)
+        }
       })
     })
 
