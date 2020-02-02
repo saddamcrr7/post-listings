@@ -49,10 +49,17 @@
     }
 
     &__name {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+        margin-left: 15px;
+    }
+
+    &__name-text {
+        margin-right: 15px;
         color: #707070;
         font-size: 20px;
         font-family: $RobotoCondensedFontFamily;
-        margin-bottom: 4px;
     }
 
     &__since {
@@ -76,15 +83,26 @@
         border-radius: 5px;
         margin-top: 40px;
         margin-bottom: 30px;
+        display: flex;
     }
 
-    &__contact-way {
-        display: flex;
+    &__contacts-col {
         font-size: 13px;
         color: #5A5A5A;
         font-family: $RobotoCondensedFontFamily;
+        margin-right: 10px;
+    }
+
+    &__contacts-name {
         margin-bottom: 7px;
     }
+
+    &__number, &__email {
+        color: rgba(#C8C8C8, 0.9);
+        font-size: 13px;
+        margin-bottom: 7px;
+    }
+
 
     &__contact-show {
         color: $color-yellow;

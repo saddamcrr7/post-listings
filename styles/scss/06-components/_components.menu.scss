@@ -1,4 +1,7 @@
 .c-menu {
+
+    $root: &;
+
     position: relative;
     z-index: 3;
 
@@ -54,6 +57,89 @@
 
         a {
             display: block;
+        }
+    }
+
+
+    &--account {
+        #{$root} {
+
+            &__btn {
+                width: auto;
+                height: auto;
+            }
+
+            &__options {
+                border: none;
+                margin-top: 0;
+
+                &::before {
+                    content: none;
+                }
+            }
+
+            &__option-item {
+                border: none;
+            }
+
+            &__login-account {
+                display: flex;
+                align-items: center;
+            }
+
+            &__login-account-text {
+                color: #989898;
+                font-size: 13px;
+                font-family: $RobotoCondensedFontFamily;
+                margin-right: 10px;
+            }
+
+            &__login-account-thumb {
+                width: 30px;
+                height: 30px;
+                border: 1px solid $color-gray-green;
+                border-radius: 20px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    @include object-fit(cover);
+                }
+            }
+
+            &__login-account-icon {
+                margin-left: 5px;
+
+                svg {
+                    fill: $color-orange;
+                    width: 6px;
+                    height: 3px;
+                }
+            }
+
+            &__user {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &__user-name {
+                color: #989898;
+                font-size: 13px;
+                font-family: $RobotoCondensedFontFamily;
+            }
+
+            &__user-thumb {
+                width: 20px;
+                height: 20px;
+                border-radius: 20px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    @include object-fit(cover);
+                }
+            }
         }
     }
 }

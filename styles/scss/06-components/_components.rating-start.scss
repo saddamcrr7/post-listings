@@ -1,0 +1,27 @@
+.c-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+
+    &__star {
+        margin-right: 3px;
+        svg {
+            fill: #707070;
+            opacity: 0.3;
+        }
+
+        &--highlighted {
+            svg {
+                fill: $color-green;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__count {
+        margin-left: 5px;
+        font-size: 13px;
+        color: #707070;
+        font-family: $RobotoCondensedFontFamily;
+    }
+}

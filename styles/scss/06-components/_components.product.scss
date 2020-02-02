@@ -48,7 +48,21 @@
 
     &__top {
         display: flex;
+        align-items: flex-start;
         justify-content: space-between;
+    }
+
+    &__details-top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__expires {
+        color: #B1B1B1;
+        font-size: 10px;
+        margin-left: 10px;
+        display: none;
     }
 
     &__meta {
@@ -71,7 +85,7 @@
 
     &__options {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
     }
 
     &__tag {
@@ -80,7 +94,9 @@
 
     &__inbox,
     &__share,
-    &__like {
+    &__like,
+    &__delete,
+    &__edit {
         width: 30px;
         height: 30px;
         display: flex;
@@ -103,6 +119,28 @@
         fill: none;
         stroke: $color-green-2;
     }
+
+
+    &__likes,
+    &__viewed {
+        display: flex;
+        margin-right: 30px;
+        align-items: center;
+
+        &-count {
+            color: #707070;
+            font-size: 10px;
+            font-family: $RobotoCondensedFontFamily;
+            letter-spacing: 0;
+            margin-left: 7px;
+        }
+    }
+
+    &__likes-icon svg{
+        fill: none;
+        stroke: #C8C8C8;
+    }
+
 
     &__row {
         display: flex;
@@ -256,6 +294,10 @@
 
             &__title {
                 font-size: 15px;
+            }
+
+            &__expires {
+                display: block;
             }
 
             &__meta-name {
