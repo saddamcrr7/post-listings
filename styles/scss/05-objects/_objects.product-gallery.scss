@@ -29,6 +29,7 @@ $itemMargin: 30px;
     &__item {
         width: 190px;
         height: 120px;
+        position: relative;
         margin-bottom: 20px;
         margin-left: $itemMargin / 2;
         margin-right: $itemMargin / 2;
@@ -44,6 +45,13 @@ $itemMargin: 30px;
             height: 100%;
             @include object-fit(cover);
         }
+    }
+
+    &__item-icon {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        z-index: 2;
     }
 }
 
