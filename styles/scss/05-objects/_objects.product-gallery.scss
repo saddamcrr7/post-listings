@@ -52,6 +52,22 @@ $itemMargin: 30px;
         bottom: 10px;
         right: 10px;
         z-index: 2;
+
+        .a {
+            fill: none;
+        }
+
+        .b {
+            isolation: isolate;
+        }
+
+        .c {
+            fill: #b7b7b7;
+        }
+
+        .d {
+            clip-path: url(#a);
+        }
     }
 }
 
@@ -60,15 +76,20 @@ $itemMargin: 30px;
     border-radius: none !important;
 }
 
-.lg-prev, .lg-next, .lg-close {
+.lg-prev,
+.lg-next,
+.lg-close {
     background-repeat: no-repeat;
     background-position: center center;
-    &::after, &::before {
+
+    &::after,
+    &::before {
         content: none !important;
     }
 }
 
-.lg-prev, .lg-next {
+.lg-prev,
+.lg-next {
     height: 85px;
     width: 43px;
 }
