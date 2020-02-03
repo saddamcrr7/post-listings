@@ -1,0 +1,16 @@
+.o-view-all-featured-listings {
+    background-color: $color-grey-light;
+
+    &__top-ad {
+        .o-header-advertisement {
+            margin-bottom: 0;
+        }
+
+        .o-ad {
+            height: 327px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}
