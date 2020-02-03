@@ -101,6 +101,11 @@
         color: rgba(#C8C8C8, 0.9);
         font-size: 13px;
         margin-bottom: 7px;
+        display: flex;
+
+        span {
+            display: none;
+        }
     }
 
 
