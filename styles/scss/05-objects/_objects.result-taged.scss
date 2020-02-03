@@ -1,0 +1,61 @@
+.o-result-taged {
+    width: 100%;
+    padding: 10px 30px;
+    box-shadow: 0px 4px 20px #5F617B26;
+    border: 1px solid #22A565;
+    border-radius: 4px;
+    background-color: $color-gray-green;
+
+    &__title {
+        color: #80818E;
+        font-size: 12px;
+        font-family: $OpenSansFontFamily;
+        margin-bottom: 5px;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__tag {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        margin-right: 60px;
+    }
+
+    &__tag-name {
+        color: $color-dark;
+        font-size: 16px;
+        font-family: $OpenSansFontFamily;
+        margin-right: 10px;
+    }
+
+    &__tag-close {
+        cursor: pointer;
+        position: relative;
+        width: 10px;
+        height: 10px;
+        margin-top: 3px;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 10px;
+            background-color: $color-dark;
+        }
+
+        &::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+}
