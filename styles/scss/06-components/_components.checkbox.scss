@@ -1,0 +1,40 @@
+.c-checkbox {
+    $root: &;
+
+    display: flex;
+    align-items: center;
+
+    &__input {
+        width: 16px;
+        height: 16px;
+        border: 1px solid #E2E2E2;
+        border-radius: 3px;
+        background: #F9F9FB;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    &__label {
+        color: $color-dark;
+        font-size: 11px;
+        font-family: $OpenSansFontFamily;
+    }
+
+    &.is-checked {
+        #{$root}__input {
+            background: $color-green;
+            position: relative;
+
+            &::before {
+                cursor: pointer;
+                content: '\2713';
+                font-size: 10px;
+                color: $white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

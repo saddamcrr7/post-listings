@@ -333,3 +333,21 @@ if (headerAdvertisements) {
 
   });
 }
+
+
+
+// custom checkbox
+const checkboxs = document.querySelectorAll('.c-checkbox')
+
+checkboxs.forEach(checkbox => {
+  const input = checkbox.querySelector('.c-checkbox__input')
+  input.addEventListener('click',()=>{
+    checkbox.classList.forEach(cls => {
+      if (cls.indexOf(`is-checked`) !== -1) {
+        checkbox.classList.remove('is-checked')
+      } else {
+        checkbox.classList.add('is-checked')
+      }
+    })
+  })
+});
