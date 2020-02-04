@@ -371,7 +371,4 @@ if(addImages) {
     const preview = addImage.querySelector('.c-add-image__preview')
     input.addEventListener('change',(e)=> loadImage(e, preview))
   })
-
-  console.log(addImages);
-  
 }
