@@ -25,6 +25,8 @@
 
     &__options-item {
         position: relative;
+        padding: 10px 25px;
+        background: $white;
 
         @include on-event() {
             #{$root}__options-sub {
@@ -44,6 +46,14 @@
                 display: inline-block;
                 padding: 3px;
             }
+        }
+
+        &:nth-child(odd) {
+            background: #f1f1f1;
+        }
+
+        @include on-event {
+            color: $color-dark;
         }
     }
 

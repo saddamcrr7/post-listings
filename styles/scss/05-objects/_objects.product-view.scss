@@ -22,6 +22,10 @@
         font-family: $RobotoCondensedFontFamily;
     }
 
+    &__title-from {
+        color: $color-yellow;
+    }
+
     &__sort {
         display: flex;
         align-items: center;

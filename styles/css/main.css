@@ -1275,6 +1275,9 @@ a:hover, a:active, a:focus {
   font-weight: 700;
   font-family: "Roboto Condensed", sans-serif;
 }
+.o-product-view__title-from {
+  color: #FEC200;
+}
 .o-product-view__sort {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1355,6 +1358,12 @@ a:hover, a:active, a:focus {
   margin-bottom: 20px;
 }
 .o-siderbar-showcase__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #2F323E;
   font-size: 13px;
   font-weight: 700;
@@ -2513,6 +2522,8 @@ a:hover, a:active, a:focus {
 }
 .c-input-select__options-item, .c-input-select__options-sub-item {
   position: relative;
+  padding: 10px 25px;
+  background: #fff;
 }
 .c-input-select__options-item:hover .c-input-select__options-sub, .c-input-select__options-sub-item:hover .c-input-select__options-sub, .c-input-select__options-item:active .c-input-select__options-sub, .c-input-select__options-sub-item:active .c-input-select__options-sub, .c-input-select__options-item:focus .c-input-select__options-sub, .c-input-select__options-sub-item:focus .c-input-select__options-sub {
   display: block;
@@ -2528,6 +2539,12 @@ a:hover, a:active, a:focus {
   border-width: 0 1px 1px 0;
   display: inline-block;
   padding: 3px;
+}
+.c-input-select__options-item:nth-child(odd), .c-input-select__options-sub-item:nth-child(odd) {
+  background: #f1f1f1;
+}
+.c-input-select__options-item:hover, .c-input-select__options-sub-item:hover, .c-input-select__options-item:active, .c-input-select__options-sub-item:active, .c-input-select__options-item:focus, .c-input-select__options-sub-item:focus {
+  color: #363636;
 }
 .c-input-select__options-sub {
   position: absolute;
@@ -2600,15 +2617,47 @@ a:hover, a:active, a:focus {
   background: #40BC37;
   font-family: "Roboto Condensed", sans-serif;
 }
-.c-search .c-input-select__options-item, .c-search .c-input-select__options-sub-item {
-  padding: 10px 25px;
-  background: #fff;
+.c-search--advance .c-search__col {
+  width: 100%;
+  max-width: 212px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 212px;
+          flex: 0 0 212px;
+  margin-right: 30px;
 }
-.c-search .c-input-select__options-item:nth-child(odd), .c-search .c-input-select__options-sub-item:nth-child(odd) {
-  background: #f1f1f1;
+.c-search--advance .c-search__advance-input {
+  width: 100%;
+  margin-bottom: 20px;
 }
-.c-search .c-input-select__options-item:hover, .c-search .c-input-select__options-sub-item:hover, .c-search .c-input-select__options-item:active, .c-search .c-input-select__options-sub-item:active, .c-search .c-input-select__options-item:focus, .c-search .c-input-select__options-sub-item:focus {
-  color: #363636;
+.c-search--advance .c-search__advance-input:focus {
+  outline: none;
+}
+.c-search--advance .c-search__advance-input:last-child {
+  margin-bottom: 0;
+}
+.c-search--advance .c-search__advance-input:not(.c-input-select) {
+  padding: 9px 12px;
+  font-size: 11px;
+  font-family: "Open Sans", sans-serif;
+  color: #5F617B;
+  background: #F9F9FB;
+  border-radius: 5px;
+  border: 1px solid #E2E2E2;
+}
+.c-search--advance .c-search__price {
+  position: relative;
+}
+.c-search--advance .c-search__price::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 57px;
+  border: 1px solid #BBBBBB;
+  border-right: none;
+  top: 50%;
+  right: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .c-product {
@@ -3475,6 +3524,12 @@ a:hover, a:active, a:focus {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.c-about {
+  display: block;
+  margin-left: 2px;
+  margin-bottom: 3px;
 }
 
 .u-clearfix:after {

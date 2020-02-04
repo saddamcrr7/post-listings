@@ -11,6 +11,8 @@
     }
 
     &__title {
+        display: flex;
+        align-items: center;
         color: $color-dark-1;
         font-size: 13px;
         font-weight: $font-weight-bold;

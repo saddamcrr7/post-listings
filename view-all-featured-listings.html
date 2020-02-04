@@ -161,7 +161,7 @@
         </div>
     </div>
 
-    <div class="c-search c-search-advance u-mt-30 u-mb-10">
+    <div class="c-search c-search--advance u-mt-30 u-mb-10">
         <div class="c-search__row">
             <input type="text" class="c-search__input" placeholder="Search...">
             <div class="c-search__input c-search__input--location c-input-select">
@@ -174,7 +174,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="c-input-select__options" style="height: 0px; overflow: hidden;">
+                <div class="c-input-select__options">
                     <div class="c-input-select__options-item has-sub-item">Location-1
                         <div class="c-input-select__options-sub">
                             <div class="c-input-select__options-sub-item" data-value="Location-11">Location-11</div>
@@ -235,6 +235,48 @@
                 <div class="c-checkbox__label">With description</div>
             </div>
         </div>
+        <div class="c-search__row u-mb-40">
+            <div class="c-search__col">
+                <div class="c-search__price">
+                    <input type="text" class="c-search__advance-input" placeholder="Price from">
+                    <input type="text" class="c-search__advance-input" placeholder="Price to">
+                </div>
+            </div>
+            <div class="c-search__col">
+                <div class="c-search__advance-input c-input-select">
+                    <div class="c-input-select__selected">
+                        <div class="c-input-select__selected-text" data-value="Condition">Condition</div>
+                        <div class="c-input-select__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9.257" height="3.907" viewBox="0 0 9.257 3.907">
+                                <path d="M399.68-1582h9.257l-4.275,3.906Z" transform="translate(-399.68 1582)"
+                                    fill="#37495d"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="c-input-select__options">
+                        <div class="c-input-select__options-item" data-value="Condition-1">Condition-1</div>
+                        <div class="c-input-select__options-item" data-value="Condition-2">Condition-2</div>
+                        <div class="c-input-select__options-item" data-value="Condition-3">Condition-3</div>
+                    </div>
+                </div>
+                <div class="c-search__advance-input c-input-select">
+                    <div class="c-input-select__selected">
+                        <div class="c-input-select__selected-text" data-value="Type of listing">Type of listing</div>
+                        <div class="c-input-select__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9.257" height="3.907" viewBox="0 0 9.257 3.907">
+                                <path d="M399.68-1582h9.257l-4.275,3.906Z" transform="translate(-399.68 1582)"
+                                    fill="#37495d"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="c-input-select__options">
+                        <div class="c-input-select__options-item" data-value="Type of listing-1">Type of listing-1</div>
+                        <div class="c-input-select__options-item" data-value="Type of listing-2">Type of listing-2</div>
+                        <div class="c-input-select__options-item" data-value="Type of listing-3">Type of listing-3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="o-container">
@@ -259,7 +301,7 @@
                 <div class="o-product-view u-mt-20">
                     <div class="o-product-view__top">
                         <div class="o-product-view__top-left">
-                            <div class="o-product-view__title">Featured listings</div>
+                            <div class="o-product-view__title">Featured listings from: <span class="o-product-view__title-from">Electronics</span></div>
                         </div>
                         <div class="o-product-view__top-right">
                             <div class="o-product-view__sort">
@@ -276,11 +318,11 @@
                                         </div>
                                     </div>
                                     <div class="c-input-select__options">
-                                        <div class="c-input-select__options-item c-search__input"
+                                        <div class="c-input-select__options-item"
                                             data-value="Newest first-1">Newest first-1</div>
-                                        <div class="c-input-select__options-item c-search__input"
+                                        <div class="c-input-select__options-item"
                                             data-value="Newest first-2">Newest first-2</div>
-                                        <div class="c-input-select__options-item c-search__input"
+                                        <div class="c-input-select__options-item"
                                             data-value="Newest first-3">Newest first-3</div>
                                     </div>
                                 </div>
@@ -1626,7 +1668,7 @@
             <div class="u-col u-col--md-3_5">
                 <div class="o-siderbar-showcase o-siderbar-showcase--tag u-mt-20">
                     <div class="o-siderbar-showcase__top">
-                        <div class="o-siderbar-showcase__title">Your tagged items:</div>
+                        <div class="o-siderbar-showcase__title">Your tagged items: <a href="#" class="c-about"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><g transform="translate(-575 -417)"><circle cx="6" cy="6" r="6" transform="translate(575 418)" fill="#f87c00"/><text transform="translate(579 417)" fill="#fff" font-size="10" font-family="OpenSans-Regular, Open Sans"><tspan x="0" y="11">?</tspan></text></g></svg></a></div>
                         <div class="o-siderbar-showcase__btn">Clear all tags</div>
                     </div>
                     <div class="o-siderbar-showcase__products">
