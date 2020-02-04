@@ -3568,6 +3568,121 @@ a:hover, a:active, a:focus {
   margin-bottom: 3px;
 }
 
+.c-add-image__title {
+  font-size: 18px;
+  color: #363636;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 30px;
+  letter-spacing: 0;
+}
+.c-add-image__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.c-add-image__col {
+  position: relative;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+}
+@media (min-width: 768px) {
+  .c-add-image__col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.3333333333%;
+            flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+}
+@media (min-width: 992px) {
+  .c-add-image__col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+.c-add-image__input-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+  padding: 70px;
+  border: 2px dashed #3EC471;
+  border-radius: 14px;
+  overflow: hidden;
+}
+@media (max-width: 991.98px) {
+  .c-add-image__input-wrapper {
+    padding: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .c-add-image__input-wrapper {
+    padding: 20px;
+  }
+}
+.c-add-image__input-icon {
+  margin-bottom: 7px;
+}
+.c-add-image__input-icon svg {
+  fill: none;
+  stroke-width: 2px;
+  stroke: #3EC471;
+}
+.c-add-image__input-text {
+  white-space: nowrap;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  color: #3EC471;
+}
+.c-add-image__input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+.c-add-image__preview-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+.c-add-image__preview {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: "cover";
+     object-fit: "cover";
+  -o-object-position: center;
+     object-position: center;
+}
+
 .u-clearfix:after {
   content: '' !important;
   display: block !important;

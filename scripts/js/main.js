@@ -355,3 +355,23 @@ checkboxs.forEach(checkbox => {
     })
   })
 });
+
+
+const loadImage = (e, output) => {
+  let reader = new FileReader();
+  reader.onload = () => {output.src = reader.result}
+  reader.readAsDataURL(event.target.files[0]);
+}
+
+const addImages = document.querySelectorAll('.c-add-image__input-wrapper')
+
+if(addImages) {
+  addImages.forEach(addImage => {
+    const input = addImage.querySelector('.c-add-image__input')
+    const preview = addImage.querySelector('.c-add-image__preview')
+    input.addEventListener('change',(e)=> loadImage(e, preview))
+  })
+
+  console.log(addImages);
+  
+}
