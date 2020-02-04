@@ -91,7 +91,7 @@ if (productViews) {
     var btnList = productView.querySelector('.o-product-view__style-list');
     var btnGrid = productView.querySelector('.o-product-view__style-grid');
     var products = productView.querySelectorAll('.c-product');
-    if(btnList && btnGrid) {
+    if (btnList && btnGrid) {
       btnList.addEventListener('click', function () {
         products = productView.querySelectorAll('.c-product');
         if (!products) return;
@@ -345,7 +345,7 @@ const checkboxs = document.querySelectorAll('.c-checkbox')
 
 checkboxs.forEach(checkbox => {
   const input = checkbox.querySelector('.c-checkbox__input')
-  input.addEventListener('click',()=>{
+  input.addEventListener('click', () => {
     checkbox.classList.forEach(cls => {
       if (cls.indexOf(`is-checked`) !== -1) {
         checkbox.classList.remove('is-checked')

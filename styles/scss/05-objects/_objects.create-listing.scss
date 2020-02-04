@@ -1,0 +1,24 @@
+.o-create-listing {
+    &__container {
+        max-width: 1156px + $grid-gutter-width;
+        @include make-container();
+    }
+
+    &__title {
+        color: $color-dark;
+        font-size: 20px;
+        letter-spacing: 0;
+        font-family: $RobotoCondensedFontFamily;
+        margin-bottom: 10px;
+    }
+
+    &__block {
+        padding: 30px;
+        background: $white;
+        box-shadow: 0px 3px 41px #0000001A;
+    }
+
+    .o-boost-plan__bottom {
+        justify-content: flex-end;
+    }
+}
