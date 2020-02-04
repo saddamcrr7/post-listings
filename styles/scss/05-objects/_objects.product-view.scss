@@ -26,6 +26,17 @@
         color: $color-yellow;
     }
 
+    &__all {
+        color: $color-green;
+        font-size: 12px;
+        font-family: $RobotoCondensedFontFamily;
+
+        &,
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     &__sort {
         display: flex;
         align-items: center;
@@ -37,7 +48,8 @@
         margin-left: 60px;
     }
 
-    &__style-text, &__sort-text {
+    &__style-text,
+    &__sort-text {
         color: #989898;
         font-size: 13px;
         font-family: $RobotoCondensedFontFamily;
@@ -47,22 +59,17 @@
         margin-right: 10px;
     }
 
-    &__style-list, &__style-grid {
+    &__style-list,
+    &__style-grid {
         cursor: pointer;
         margin-left: 10px;
     }
 
-    &__style-list {
+    &__style-list {}
 
-    }
+    &__style-grid {}
 
-    &__style-grid {
-
-    }
-
-    &__container {
-
-    }
+    &__container {}
 
     .c-product {
         transition: 0.1s ease-in-out;

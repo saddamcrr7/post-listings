@@ -83,31 +83,35 @@ var productsSlider = new Swiper('.o-products-slider__container', {
 });
 
 
-var productView = document.querySelector('.o-product-view');
+var productViews = document.querySelectorAll('.o-product-view');
 
-if (productView) {
-  var productViewContianer = productView.querySelector('.o-product-view__container');
-  var btnList = productView.querySelector('.o-product-view__style-list');
-  var btnGrid = productView.querySelector('.o-product-view__style-grid');
-  var products = productView.querySelectorAll('.c-product');
-  btnList.addEventListener('click', function () {
-    products = productView.querySelectorAll('.c-product');
-    if (!products) return;
-    products.forEach(function (product) {
-      product.classList.remove('c-product--medium');
-      product.classList.add('c-product--wide');
-      productViewContianer.classList.remove('o-product-showcase__row');
-    });
-  });
-  btnGrid.addEventListener('click', function () {
-    products = productView.querySelectorAll('.c-product');
-    if (!products) return;
-    products.forEach(function (product) {
-      productViewContianer.classList.add('o-product-showcase__row');
-      product.classList.remove('c-product--wide');
-      product.classList.add('c-product--medium');
-    });
-  });
+if (productViews) {
+  productViews.forEach(productView => {
+    var productViewContianer = productView.querySelector('.o-product-view__container');
+    var btnList = productView.querySelector('.o-product-view__style-list');
+    var btnGrid = productView.querySelector('.o-product-view__style-grid');
+    var products = productView.querySelectorAll('.c-product');
+    if(btnList && btnGrid) {
+      btnList.addEventListener('click', function () {
+        products = productView.querySelectorAll('.c-product');
+        if (!products) return;
+        products.forEach(function (product) {
+          product.classList.remove('c-product--medium');
+          product.classList.add('c-product--wide');
+          productViewContianer.classList.remove('o-product-showcase__row');
+        });
+      });
+      btnGrid.addEventListener('click', function () {
+        products = productView.querySelectorAll('.c-product');
+        if (!products) return;
+        products.forEach(function (product) {
+          productViewContianer.classList.add('o-product-showcase__row');
+          product.classList.remove('c-product--wide');
+          product.classList.add('c-product--medium');
+        });
+      });
+    }
+  })
 }
 
 var chartCanvas = document.querySelector('.o-single-product__chart-canvas')

@@ -1278,6 +1278,14 @@ a:hover, a:active, a:focus {
 .o-product-view__title-from {
   color: #FEC200;
 }
+.o-product-view__all {
+  color: #40BC37;
+  font-size: 12px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.o-product-view__all, .o-product-view__all:hover {
+  text-decoration: underline;
+}
 .o-product-view__sort {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2345,6 +2353,10 @@ a:hover, a:active, a:focus {
           transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.o-specific-category-listing {
+  background-color: #F8F8F8;
+}
+
 .c-nav {
   width: 100%;
   padding-right: 10px;
@@ -2586,9 +2598,6 @@ a:hover, a:active, a:focus {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .c-search__input {
   color: #8D8C95;
