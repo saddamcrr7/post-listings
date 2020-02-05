@@ -105,8 +105,324 @@
     <div class="o-create-listing__container u-mt-30">
         <div class="o-create-listing__title">Create a listing</div>
         <div class="o-create-listing__block">
-            <div class="o-create-listing__block__inner">
-                <!-- <textarea name="v" id="description" cols="30" rows="10"></textarea> -->
+            <div class="o-create-listing__block-inner">
+                <div class="o-create-listing__input-wrapper">
+                    <label for="title" class="o-create-listing__label">Listing title</label>
+                    <input type="text" id="title" class="o-create-listing__input o-create-listing__input--title">
+                </div>
+                <div class="o-create-listing__input-wrapper">
+                    <label class="o-create-listing__label">Type of listing</label>
+                    <div class="c-input-select o-create-listing__input">
+                        <div class="c-input-select__selected">
+                            <div class="c-input-select__selected-text" data-value="Private">Private</div>
+                            <div class="c-input-select__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="9.257" height="3.907"
+                                    viewBox="0 0 9.257 3.907">
+                                    <path d="M399.68-1582h9.257l-4.275,3.906Z" transform="translate(-399.68 1582)"
+                                        fill="#37495d"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="c-input-select__options">
+                            <div class="c-input-select__options-item" data-value="Private-1">Private-1</div>
+                            <div class="c-input-select__options-item" data-value="Private-2">Private-2</div>
+                            <div class="c-input-select__options-item" data-value="Private-3">Private-3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="o-create-listing__category">
+                    <div class="o-create-listing__input-wrapper">
+                        <label class="o-create-listing__label">Choose Category</label>
+                        <div class="c-input-select o-create-listing__input">
+                            <div class="c-input-select__selected">
+                                <div class="c-input-select__selected-text" data-value="Electronics">Electronics</div>
+                                <div class="c-input-select__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.257" height="3.907"
+                                        viewBox="0 0 9.257 3.907">
+                                        <path d="M399.68-1582h9.257l-4.275,3.906Z" transform="translate(-399.68 1582)"
+                                            fill="#37495d"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="c-input-select__options">
+                                <div class="c-input-select__options-item" data-value="Electronics-1">Electronics-1</div>
+                                <div class="c-input-select__options-item" data-value="Electronics-2">Electronics-2</div>
+                                <div class="c-input-select__options-item" data-value="Electronics-3">Electronics-3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-create-listing__input-wrapper">
+                        <label class="o-create-listing__label">Sub-category 1</label>
+                        <div class="c-input-select o-create-listing__input">
+                            <div class="c-input-select__selected">
+                                <div class="c-input-select__selected-text" data-value="Computers">Computers</div>
+                                <div class="c-input-select__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.257" height="3.907"
+                                        viewBox="0 0 9.257 3.907">
+                                        <path d="M399.68-1582h9.257l-4.275,3.906Z" transform="translate(-399.68 1582)"
+                                            fill="#37495d"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="c-input-select__options">
+                                <div class="c-input-select__options-item" data-value="Computers-1">Computers-1</div>
+                                <div class="c-input-select__options-item" data-value="Computers-2">Computers-2</div>
+                                <div class="c-input-select__options-item" data-value="Computers-3">Computers-3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-create-listing__input-wrapper">
+                        <label class="o-create-listing__label">Sub-category 1</label>
+                        <div class="c-input-select o-create-listing__input">
+                            <div class="c-input-select__selected">
+                                <div class="c-input-select__selected-text" data-value="Computers">Computers</div>
+                                <div class="c-input-select__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.257" height="3.907"
+                                        viewBox="0 0 9.257 3.907">
+                                        <path d="M399.68-1582h9.257l-4.275,3.906Z" transform="translate(-399.68 1582)"
+                                            fill="#37495d"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="c-input-select__options">
+                                <div class="c-input-select__options-item" data-value="Computers-1">Computers-1</div>
+                                <div class="c-input-select__options-item" data-value="Computers-2">Computers-2</div>
+                                <div class="c-input-select__options-item" data-value="Computers-3">Computers-3</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="o-create-listing__input-wrapper">
+                    <label for="description" class="o-create-listing__label">Description</label>
+                    <textarea name="Description" id="description" cols="30" rows="10"
+                        class="o-create-listing__input"></textarea>
+                </div>
+                <div class="o-create-listing__characteristics">
+                    <div class="o-create-listing__input-wrapper">
+                        <label class="o-create-listing__label">Condition</label>
+                        <div class="c-input-select o-create-listing__input">
+                            <div class="c-input-select__selected">
+                                <div class="c-input-select__selected-text" data-value="Select">Select</div>
+                                <div class="c-input-select__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.257" height="3.907"
+                                        viewBox="0 0 9.257 3.907">
+                                        <path d="M399.68-1582h9.257l-4.275,3.906Z" transform="translate(-399.68 1582)"
+                                            fill="#37495d"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="c-input-select__options">
+                                <div class="c-input-select__options-item" data-value="Select-1">Select-1</div>
+                                <div class="c-input-select__options-item" data-value="Select-2">Select-2</div>
+                                <div class="c-input-select__options-item" data-value="Select-3">Select-3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-create-listing__input-wrapper">
+                        <label class="o-create-listing__label">Characteristic 2</label>
+                        <div class="c-input-select o-create-listing__input">
+                            <div class="c-input-select__selected">
+                                <div class="c-input-select__selected-text" data-value="Select">Select</div>
+                                <div class="c-input-select__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.257" height="3.907"
+                                        viewBox="0 0 9.257 3.907">
+                                        <path d="M399.68-1582h9.257l-4.275,3.906Z" transform="translate(-399.68 1582)"
+                                            fill="#37495d"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="c-input-select__options">
+                                <div class="c-input-select__options-item" data-value="Select-1">Select-1</div>
+                                <div class="c-input-select__options-item" data-value="Select-2">Select-2</div>
+                                <div class="c-input-select__options-item" data-value="Select-3">Select-3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-create-listing__input-wrapper">
+                        <label class="o-create-listing__label">Characteristic 3</label>
+                        <div class="c-input-select o-create-listing__input">
+                            <div class="c-input-select__selected">
+                                <div class="c-input-select__selected-text" data-value="Select">Select</div>
+                                <div class="c-input-select__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.257" height="3.907"
+                                        viewBox="0 0 9.257 3.907">
+                                        <path d="M399.68-1582h9.257l-4.275,3.906Z" transform="translate(-399.68 1582)"
+                                            fill="#37495d"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="c-input-select__options">
+                                <div class="c-input-select__options-item" data-value="Select-1">Select-1</div>
+                                <div class="c-input-select__options-item" data-value="Select-2">Select-2</div>
+                                <div class="c-input-select__options-item" data-value="Select-3">Select-3</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="o-create-listing__row">
+                    <div class="o-create-listing__col">
+                        <div class="o-create-listing__pricing">
+                            <div class="o-create-listing__pricing-title">Pricing</div>
+                            <div class="o-create-listing__pricing-row">
+                                <div class="o-create-listing__pricing-name">Price</div>
+                                <div class="o-create-listing__pricing-input-wrap">
+                                    <div class="c-input-select">
+                                        <div class="c-input-select__selected">
+                                            <div class="c-input-select__selected-text" data-value="EUR">EUR</div>
+                                            <div class="c-input-select__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="9.257" height="3.907"
+                                                    viewBox="0 0 9.257 3.907">
+                                                    <path d="M399.68-1582h9.257l-4.275,3.906Z"
+                                                        transform="translate(-399.68 1582)" fill="#37495d"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="c-input-select__options">
+                                            <div class="c-input-select__options-item" data-value="EUR-1">EUR-1</div>
+                                            <div class="c-input-select__options-item" data-value="EUR-2">EUR-2</div>
+                                            <div class="c-input-select__options-item" data-value="EUR-3">EUR-3</div>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="o-create-listing__pricing-input">
+                                </div>
+                            </div>
+                            <div class="o-create-listing__pricing-row">
+                                <div class="o-create-listing__pricing-name">Price</div>
+                                <div class="o-create-listing__pricing-input-wrap">
+                                    <div class="c-input-select">
+                                        <div class="c-input-select__selected">
+                                            <div class="c-input-select__selected-text" data-value="EUR">EUR</div>
+                                            <div class="c-input-select__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="9.257" height="3.907"
+                                                    viewBox="0 0 9.257 3.907">
+                                                    <path d="M399.68-1582h9.257l-4.275,3.906Z"
+                                                        transform="translate(-399.68 1582)" fill="#37495d"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="c-input-select__options">
+                                            <div class="c-input-select__options-item" data-value="EUR-1">EUR-1</div>
+                                            <div class="c-input-select__options-item" data-value="EUR-2">EUR-2</div>
+                                            <div class="c-input-select__options-item" data-value="EUR-3">EUR-3</div>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="o-create-listing__pricing-input">
+                                </div>
+                            </div>
+                            <div class="c-checkbox c-checkbox--radio">
+                                <div class="c-checkbox__input"></div>
+                                <div class="c-checkbox__label">Free</div>
+                            </div>
+                            <div class="c-checkbox c-checkbox--radio">
+                                <div class="c-checkbox__input"></div>
+                                <div class="c-checkbox__label">Swap</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-create-listing__col">
+                        <div class="o-create-listing__delivery">
+                            <div class="o-create-listing__delivery-row">
+                                <div class="o-create-listing__delivery-col">
+                                    <div class="c-checkbox">
+                                        <div class="c-checkbox__input"></div>
+                                        <div class="c-checkbox__label">Post</div>
+                                    </div>
+                                    <div class="c-checkbox">
+                                        <div class="c-checkbox__input"></div>
+                                        <div class="c-checkbox__label">Negotiable</div>
+                                    </div>
+                                </div>
+                                <div class="o-create-listing__delivery-col">
+                                    <div class="c-checkbox">
+                                        <div class="c-checkbox__input"></div>
+                                        <div class="c-checkbox__label">Pick up</div>
+                                    </div>
+                                    <div class="c-checkbox">
+                                        <div class="c-checkbox__input"></div>
+                                        <div class="c-checkbox__label">Other</div>
+                                    </div>
+                                </div>
+                                <div class="o-create-listing__delivery-col">
+                                    <div class="c-checkbox">
+                                        <div class="c-checkbox__input"></div>
+                                        <div class="c-checkbox__label">Personal delivery</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o-create-listing__block-title">Contact information</div>
+            <div class="o-create-listing__block-inner">
+                <div class="o-create-listing__location">
+                    <div class="o-create-listing__input-wrapper">
+                        <label class="o-create-listing__label">Location</label>
+                        <div class="c-input-select o-create-listing__input">
+                            <div class="c-input-select__selected">
+                                <div class="c-input-select__selected-text" data-value="Country">Country</div>
+                                <div class="c-input-select__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.257" height="3.907"
+                                        viewBox="0 0 9.257 3.907">
+                                        <path d="M399.68-1582h9.257l-4.275,3.906Z" transform="translate(-399.68 1582)"
+                                            fill="#37495d"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="c-input-select__options">
+                                <div class="c-input-select__options-item" data-value="Country-1">Country-1</div>
+                                <div class="c-input-select__options-item" data-value="Country-2">Country-2</div>
+                                <div class="c-input-select__options-item" data-value="Country-3">Country-3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-create-listing__input-wrapper">
+                        <div class="c-input-select o-create-listing__input">
+                            <div class="c-input-select__selected">
+                                <div class="c-input-select__selected-text" data-value="Province">Province</div>
+                                <div class="c-input-select__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.257" height="3.907"
+                                        viewBox="0 0 9.257 3.907">
+                                        <path d="M399.68-1582h9.257l-4.275,3.906Z" transform="translate(-399.68 1582)"
+                                            fill="#37495d"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="c-input-select__options">
+                                <div class="c-input-select__options-item" data-value="Province-1">Province-1</div>
+                                <div class="c-input-select__options-item" data-value="Province-2">Province-2</div>
+                                <div class="c-input-select__options-item" data-value="Province-3">Province-3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-create-listing__input-wrapper">
+                        <div class="c-input-select o-create-listing__input">
+                            <div class="c-input-select__selected">
+                                <div class="c-input-select__selected-text" data-value="City">City</div>
+                                <div class="c-input-select__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.257" height="3.907"
+                                        viewBox="0 0 9.257 3.907">
+                                        <path d="M399.68-1582h9.257l-4.275,3.906Z" transform="translate(-399.68 1582)"
+                                            fill="#37495d"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="c-input-select__options">
+                                <div class="c-input-select__options-item" data-value="City-1">City-1</div>
+                                <div class="c-input-select__options-item" data-value="City-2">City-2</div>
+                                <div class="c-input-select__options-item" data-value="City-3">City-3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="o-create-listing__input-wrapper">
+                    <label class="o-create-listing__label">Mobile Phone</label>
+                    <input class="c-input-select o-create-listing__input" placeholder="Mobile Phone">
+                </div>
             </div>
         </div>
 
