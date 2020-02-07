@@ -1,4 +1,14 @@
 .o-create-listing {
+    .o-boost-plan__bottom {
+        justify-content: flex-end;
+    }
+
+    .c-input-select {
+        width: 300px;
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+
     &__container {
         max-width: 1156px + $grid-gutter-width;
         @include make-container();
@@ -18,7 +28,200 @@
         box-shadow: 0px 3px 41px #0000001A;
     }
 
-    .o-boost-plan__bottom {
-        justify-content: flex-end;
+    &__block-inner {
+        padding: 30px;
+        background: $white;
+        box-shadow: 0px 0px 10px #00000014;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
     }
+
+    &__block-title {
+        color: $color-dark;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    &__category,
+    &__characteristics {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    &__row {
+        width: 100%;
+        @include make-row();
+    }
+
+    &__col {
+        @include make-col-ready();
+
+
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+    }
+
+    &__label {
+        color: $color-dark;
+        font-size: 15px;
+        font-family: $OpenSansFontFamily;
+    }
+
+    &__input-wrapper {
+        margin-bottom: 20px;
+
+        &--title {
+            max-width: 667px;
+            width: 100%;
+        }
+
+        &--description {
+            width: 100%;
+        }
+    }
+
+    &__input {
+        background: #F9F9FB;
+        border: 2px solid #E2E2E2;
+        padding: 14px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        color: rgba(#5F617B, 0.5);
+        font-family: $OpenSansFontFamily;
+        width: 100%;
+
+        &--title {
+            border: 2px solid #3EC471;
+            background: #F2F5F3;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__characteristics {
+        margin-bottom: 50px;
+    }
+
+    &__characteristics-title {
+        width: 100%;
+        font-size: 18px;
+        color: $color-dark;
+        font-family: $RobotoCondensedFontFamily;
+        margin-bottom: 20px;
+    }
+
+    &__delivery,
+    &__pricing {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__pricing {
+        .c-input-select {
+            font-size: 12px;
+            width: 50px;
+            flex: 0 0 50px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: none;
+            color: $color-dark;
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 20px;
+                width: 1px;
+                background: rgba(#423F58, 0.1);
+            }
+        }
+
+        .c-input-select__icon {
+            right: 0;
+        }
+
+        .c-input-select__options-item {
+            padding: 10px;
+        }
+
+        .c-checkbox {
+            margin-bottom: 15px;
+        }
+    }
+
+
+    &__pricing-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    &__pricing-input-wrap {
+        display: flex;
+        border: 1px solid rgba(#423F58, 0.1);
+        border-radius: 3px;
+        width: 200px;
+    }
+
+    &__pricing-name {
+        color: $color-dark;
+        font-family: $RobotoCondensedFontFamily;
+        width: 90px;
+        margin-right: 30px;
+        display: flex;
+    }
+
+
+    &__pricing-input {
+        width: 100%;
+        border: none;
+        outline: none;
+        background: $white;
+        padding: 10px 15px;
+        font-size: 15px;
+        color: #8D8C95;
+        font-family: $RobotoCondensedFontFamily;
+    }
+
+    &__delivery-title,
+    &__pricing-title {
+        color: $color-dark;
+        font-size: 15px;
+        font-family: $OpenSansFontFamily;
+        margin-bottom: 25px;
+    }
+
+    &__delivery-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__delivery-col {
+        margin-right: 25px;
+
+        .c-checkbox {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__location {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
 }

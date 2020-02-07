@@ -4,12 +4,19 @@
     display: flex;
     align-items: center;
 
+    &:not(.c-checkbox--radio) {
+        #{$root} {
+            &__input {
+                border: 1px solid #E2E2E2;
+                border-radius: 3px;
+                background: #F9F9FB;
+            }
+        }
+    }
+
     &__input {
         width: 16px;
         height: 16px;
-        border: 1px solid #E2E2E2;
-        border-radius: 3px;
-        background: #F9F9FB;
         margin-right: 10px;
         cursor: pointer;
     }
@@ -20,7 +27,7 @@
         font-family: $OpenSansFontFamily;
     }
 
-    &.is-checked {
+    &.is-checked:not(.c-checkbox--radio) {
         #{$root}__input {
             background: $color-green;
             position: relative;
@@ -34,6 +41,34 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+
+    &--radio {
+        #{$root}__input {
+            border-radius: 8px;
+            border: 1px solid #8D8C95;
+        }
+
+        &.is-checked {
+            #{$root}__input {
+                border: 1px solid $color-orange;
+                position: relative;
+
+                &::before {
+                    cursor: pointer;
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 5px;
+                    background: $color-orange;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
             }
         }
     }
