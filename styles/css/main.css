@@ -2941,6 +2941,28 @@ a:hover, a:active, a:focus {
   -o-object-position: center;
      object-position: center;
 }
+.c-product__thumb {
+  border: 1px solid #2F323E;
+  position: relative;
+  overflow: hidden;
+}
+.c-product--featured .c-product__thumb {
+  border: 1px solid #F06354;
+}
+.c-product--featured .c-product__featured-tag {
+  position: absolute;
+  top: 17px;
+  left: -35px;
+  text-align: center;
+  padding: 3px;
+  width: 120px;
+  z-index: 3;
+  font-size: 10px;
+  background: #F06354;
+  color: #fff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
 .c-product:hover .c-product__tag, .c-product:active .c-product__tag, .c-product:focus .c-product__tag {
   opacity: 1;
 }

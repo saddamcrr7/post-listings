@@ -40,6 +40,32 @@
         @include object-fit(cover);
     }
 
+    &__thumb {
+        border: 1px solid $color-dark-1;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &--featured {
+        #{$root}__thumb {
+            border: 1px solid $color-pink;
+        }
+
+        #{$root}__featured-tag {
+            position: absolute;
+            top: 17px;
+            left: -35px;
+            text-align: center;
+            padding: 3px;
+            width: 120px;
+            z-index: 3;
+            font-size: 10px;
+            background: $color-pink;
+            color: $white;
+            transform: rotate(-45deg);
+        }
+    }
+
     @include on-event() {
         #{$root}__tag {
             opacity: 1;
