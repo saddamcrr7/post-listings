@@ -1,0 +1,9 @@
+.o-single-listing-page {
+
+
+    @include media-breakpoint-up(md) {
+        .o-products-slider__item {
+            margin-right: 39px !important;
+        }
+    }
+}

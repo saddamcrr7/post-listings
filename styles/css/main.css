@@ -2596,6 +2596,12 @@ a:hover, a:active, a:focus {
           justify-content: space-between;
 }
 
+@media (min-width: 768px) {
+  .o-single-listing-page .o-products-slider__item {
+    margin-right: 39px !important;
+  }
+}
+
 .c-nav {
   width: 100%;
   padding-right: 10px;
