@@ -390,6 +390,8 @@
     }
 
     &--small {
+        @include hideCnotentForSmMd($root);
+
         #{$root} {
             &__thumb {
                 max-width: 111px;

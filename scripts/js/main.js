@@ -372,3 +372,23 @@ if(addImages) {
     input.addEventListener('change',(e)=> loadImage(e, preview))
   })
 }
+
+// const xLg = window.matchMedia("(max-width: 1024px)")
+// const xMd = window.matchMedia("(max-width: 768px)")
+
+
+// const wideProducts = document.querySelectorAll('.c-product--wide')
+
+// function productResposive() {
+
+//   if (xMd.matches) { 
+//     wideProducts.forEach(wideProduct => {
+     
+//     })
+//   } else {
+   
+//   }
+// }
+
+// productResposive() 
+// xMd.addListener(productResposive)

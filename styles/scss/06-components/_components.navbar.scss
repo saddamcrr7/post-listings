@@ -34,6 +34,15 @@ $nav-item-padding: 5px;
         margin-left: $nav-item-space;
         cursor: pointer;
 
+        @include media-breakpoint-down(lg) {
+            margin-left: $nav-item-space / 2;
+        }
+
+
+        @include media-breakpoint-down(md) {
+            margin-left: $nav-item-space / 5;
+        }
+
         &--user {
             display: flex;
             align-items: center;
@@ -52,7 +61,7 @@ $nav-item-padding: 5px;
                 margin-bottom: 2px;
             }
 
-            & > #{$root}__navbar-link {
+            &>#{$root}__navbar-link {
                 line-height: 15px;
                 height: 56px;
                 display: flex;

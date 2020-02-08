@@ -15,13 +15,16 @@
 }
 
 .u-col--categories {
-    @include media-breakpoint-up(md) {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+        display: block;
         @include make-col(2.3)
     }
 }
 
 .u-col--header {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         @include make-col(9.7)
     }
 }

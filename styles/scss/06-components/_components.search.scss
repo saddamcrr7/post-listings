@@ -4,7 +4,7 @@
     @include make-container();
     max-width: 1239px + $grid-gutter-width;
     margin-top: 62px;
-    margin-bottom: 51px;
+    margin-bottom: 41px;
 
     &__row {
         display: flex;
@@ -19,8 +19,7 @@
         border: none;
         border-radius: 2px;
         background: $white;
-        max-width: 310px;
-        width: 100%;
+        width: 310px;
         margin-right: 50px;
         border: 1px solid transparent;
 
@@ -28,6 +27,8 @@
             outline: none;
             border: 1px solid $color-gray-green;
         }
+
+        margin-bottom: 10px;
     }
 
     &__button {
@@ -39,6 +40,15 @@
         padding: 14px 56px;
         background: $color-green;
         font-family: $RobotoCondensedFontFamily;
+        margin-bottom: 10px;
+    }
+
+
+    @include media-breakpoint-down(sm) {
+        &__input, &__button {
+            width: 100%;
+            margin-right: 0;
+        }
     }
 
     &--advance {
@@ -48,6 +58,12 @@
                 max-width: 212px;
                 flex: 0 0 212px;
                 margin-right: 30px;
+
+
+                @include media-breakpoint-down(xs) {
+                    max-width: 100%;
+                    flex:  0 0 100%;
+                }
             }
 
             &__advance-input {
@@ -56,10 +72,6 @@
 
                 &:focus {
                     outline: none;
-                }
-
-                &:last-child {
-                    margin-bottom: 0;
                 }
 
                 &:not(.c-input-select) {
