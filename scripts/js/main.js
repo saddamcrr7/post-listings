@@ -373,22 +373,23 @@ if(addImages) {
   })
 }
 
-// const xLg = window.matchMedia("(max-width: 1024px)")
-// const xMd = window.matchMedia("(max-width: 768px)")
+const xLg = window.matchMedia("(max-width: 1024px)")
+const xMd = window.matchMedia("(max-width: 768px)")
 
 
-// const wideProducts = document.querySelectorAll('.c-product--wide')
+const wideProducts = document.querySelectorAll('.c-product--wide')
 
-// function productResposive() {
+function productResposive() {
 
-//   if (xMd.matches) { 
-//     wideProducts.forEach(wideProduct => {
-     
-//     })
-//   } else {
+  if (xLg.matches) { 
+    
+    wideProducts.forEach(wideProduct => {
+      wideProduct.classList.add('c-product--small')
+    })
+  } else {
    
-//   }
-// }
+  }
+}
 
-// productResposive() 
-// xMd.addListener(productResposive)
+productResposive() 
+xLg.addListener(productResposive)

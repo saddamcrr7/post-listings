@@ -2,13 +2,15 @@
     $root: &;
 
     @include make-container();
-    max-width: 1239px + $grid-gutter-width;
+    @include make-container-max-widths();
     margin-top: 62px;
     margin-bottom: 41px;
 
     &__row {
         display: flex;
         flex-wrap: wrap;
+
+            justify-content: center;
     }
 
     &__input {
@@ -29,6 +31,10 @@
         }
 
         margin-bottom: 10px;
+
+        @include media-breakpoint-down(lg) {
+            margin-right: 25px;
+        }
     }
 
     &__button {
@@ -63,6 +69,7 @@
                 @include media-breakpoint-down(xs) {
                     max-width: 100%;
                     flex:  0 0 100%;
+                    margin-right: 0;
                 }
             }
 
@@ -95,7 +102,7 @@
                     height: 57px;
                     border: 1px solid #BBBBBB;
                     border-right: none;
-                    top: 50%;
+                    top: 42%;
                     right: 100%;
                     transform: translateY(-50%);
                 }
