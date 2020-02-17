@@ -46,6 +46,10 @@
         display: flex;
         align-items: center;
         margin-left: 60px;
+
+        @include media-breakpoint-down(xs) {
+            display: none;
+        }
     }
 
     &__style-text,

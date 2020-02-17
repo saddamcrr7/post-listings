@@ -8,4 +8,13 @@
     position: fixed;
     left: 0;
     top: 0;
+
+    @include media-breakpoint-down(xs) {
+        padding: {
+            top: 5.5px;
+            bottom: 5.5px;
+            left: 0;
+            right: 0;
+        }
+    }
 }

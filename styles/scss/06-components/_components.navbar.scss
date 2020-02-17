@@ -16,6 +16,11 @@ $nav-item-padding: 5px;
         font-size: 30px;
         font-weight: $font-weight-medium;
 
+        @include media-breakpoint-down(xs) {
+            font-size: 16px;
+            font-weight: $font-weight-bold;
+        }
+
         @include on-event {
             color: $white;
             text-decoration: none;
@@ -100,6 +105,10 @@ $nav-item-padding: 5px;
         position: relative;
         padding: $nav-item-padding;
 
+        @include media-breakpoint-down(md){
+            font-size: 14px;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -110,6 +119,15 @@ $nav-item-padding: 5px;
             border-radius: 5px;
             background: $white;
             opacity: 0;
+
+           
+        }
+
+        @include media-breakpoint-down(sm) {
+            &::before {
+                display: none;
+            }
+            font-size: 20px;
         }
 
         @include on-event {
@@ -137,6 +155,11 @@ $nav-item-padding: 5px;
                 height: 100%;
                 @include object-fit(cover);
             }
+
+            @include media-breakpoint-down(sm) {
+                width: 40px;
+                height: 40px;
+            }
         }
     }
 
@@ -152,6 +175,10 @@ $nav-item-padding: 5px;
         z-index: map-get($z-layers, drop-down);
         min-width: 200px;
         visibility: collapse;
+
+        @include media-breakpoint-down(sm) {
+            top: 25px;
+        }
     }
 
     &__navbar-dropdown-item {
@@ -163,6 +190,40 @@ $nav-item-padding: 5px;
 
         &::before {
             display: none;
+        }
+    }
+
+
+    &__links {
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-down(sm) {
+            position: fixed;
+            top: 50px;
+            right: 0;
+            bottom: 0;
+            left: 0px;
+            background: $color-orange;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            @include basic-transition(0.3s);
+
+            #{$root}__navbar-item {
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+            #{$root}__navbar-item--dropdown > .c-nav__navbar-link {
+                height: auto;
+            }
+
+            &.is-active {
+                pointer-events: auto;
+                opacity: 1;
+            }
         }
     }
 }

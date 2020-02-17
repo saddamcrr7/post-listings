@@ -18,5 +18,9 @@
             margin-right: 19px;
             margin-left: 19px;
         }
+
+        @include media-breakpoint-down(md) {
+            justify-content: center;
+        }
     }
 }

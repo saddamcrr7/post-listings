@@ -1,5 +1,27 @@
 "use strict";
 
+const navLinx = document.querySelector('.c-nav__links')
+const toggler = document.querySelector('.c-mobile-nav-toggler')
+let isNavOpen = 0
+
+toggler.addEventListener('click', ()=> {
+  if(isNavOpen == 0) {
+    navLinx.classList.add('is-active')
+    toggler.classList.add('is-active')
+    isNavOpen = !0
+  }
+  else {
+    navLinx.classList.remove('is-active')
+    toggler.classList.remove('is-active')
+    isNavOpen = 0
+  }
+
+  console.log(isNavOpen);
+  
+})
+
+
+
 var selected = document.querySelectorAll('.c-input-select');
 
 if (selected) {
