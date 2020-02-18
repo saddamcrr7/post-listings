@@ -1,0 +1,7 @@
+.o-my-profile {
+    @include media-breakpoint-down(md) {
+        &__row {
+            flex-direction: column-reverse;
+        }
+    }
+}

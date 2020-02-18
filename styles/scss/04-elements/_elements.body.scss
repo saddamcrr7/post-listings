@@ -13,4 +13,8 @@ body {
   &.is-nav-mobile-open {
     overflow: hidden;
   }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 50px;
+  }
 }

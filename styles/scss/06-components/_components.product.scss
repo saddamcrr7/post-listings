@@ -162,7 +162,7 @@
         }
     }
 
-    &__likes-icon svg{
+    &__likes-icon svg {
         fill: none;
         stroke: #C8C8C8;
     }
@@ -398,6 +398,12 @@
                 flex: 0 0 111px;
                 height: 99px;
                 margin-right: 10px;
+
+                @include media-breakpoint-down(xs) {
+                    max-width: 90px;
+                    flex: 0 0 90px;
+                    height: 70px;
+                }
             }
 
             &__delete {

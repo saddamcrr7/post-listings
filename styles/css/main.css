@@ -941,6 +941,11 @@ body.is-blocked, body.is-modal-open, body.is-gradpanel-open, body.lg-on {
 body.is-nav-mobile-open {
   overflow: hidden;
 }
+@media (max-width: 767.98px) {
+  body {
+    padding-top: 50px;
+  }
+}
 
 html {
   -webkit-box-sizing: border-box;
@@ -1194,6 +1199,7 @@ a:hover, a:active, a:focus {
   font-size: 13px;
   font-weight: 700;
   font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 10px;
 }
 .o-products-slider__top {
   display: -webkit-box;
@@ -1402,6 +1408,11 @@ a:hover, a:active, a:focus {
   background: #fff;
   -webkit-box-shadow: 0px 0px 10px #00000014;
           box-shadow: 0px 0px 10px #00000014;
+}
+@media (max-width: 575.98px) {
+  .o-siderbar-showcase {
+    padding: 20px 10px;
+  }
 }
 .o-siderbar-showcase__top {
   display: -webkit-box;
@@ -1940,6 +1951,11 @@ a:hover, a:active, a:focus {
   -webkit-box-shadow: 0px 0px 10px #00000014;
           box-shadow: 0px 0px 10px #00000014;
 }
+@media (max-width: 767.98px) {
+  .o-profile {
+    padding: 20px;
+  }
+}
 .o-profile__top {
   min-height: 30px;
   display: -webkit-box;
@@ -2245,6 +2261,11 @@ a:hover, a:active, a:focus {
   line-height: 16px;
   margin-right: 15px;
 }
+@media (max-width: 575.98px) {
+  .o-boost-plan__terms {
+    margin-right: 10px;
+  }
+}
 .o-boost-plan__terms-cta {
   text-decoration: underline;
 }
@@ -2257,6 +2278,7 @@ a:hover, a:active, a:focus {
   font-size: 12px;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 0.44px;
+  white-space: nowrap;
   -webkit-transition: background 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: background 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -2421,6 +2443,11 @@ a:hover, a:active, a:focus {
   padding: 14px 20px;
   font-size: 14px;
 }
+@media (max-width: 575.98px) {
+  .o-create-listing .c-input-select {
+    width: 100%;
+  }
+}
 .o-create-listing__container {
   max-width: 1176px;
   width: 100%;
@@ -2442,6 +2469,11 @@ a:hover, a:active, a:focus {
   -webkit-box-shadow: 0px 3px 41px #0000001A;
           box-shadow: 0px 3px 41px #0000001A;
 }
+@media (max-width: 767.98px) {
+  .o-create-listing__block {
+    padding: 10px;
+  }
+}
 .o-create-listing__block-inner {
   padding: 30px;
   background: #fff;
@@ -2455,6 +2487,11 @@ a:hover, a:active, a:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media (max-width: 767.98px) {
+  .o-create-listing__block-inner {
+    padding: 10px;
+  }
 }
 .o-create-listing__block-title {
   color: #363636;
@@ -2510,6 +2547,11 @@ a:hover, a:active, a:focus {
 }
 .o-create-listing__input-wrapper--description {
   width: 100%;
+}
+@media (max-width: 575.98px) {
+  .o-create-listing__input-wrapper {
+    width: 100%;
+  }
 }
 .o-create-listing__input {
   background: #F9F9FB;
@@ -2642,6 +2684,8 @@ a:hover, a:active, a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -2653,6 +2697,15 @@ a:hover, a:active, a:focus {
 @media (min-width: 768px) {
   .o-single-listing-page .o-products-slider__item {
     margin-right: 39px !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .o-my-profile__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 
@@ -3458,6 +3511,15 @@ a:hover, a:active, a:focus {
   height: 99px;
   margin-right: 10px;
 }
+@media (max-width: 575.98px) {
+  .c-product--small .c-product__thumb {
+    max-width: 90px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90px;
+            flex: 0 0 90px;
+    height: 70px;
+  }
+}
 .c-product--small .c-product__delete {
   cursor: pointer;
 }
@@ -3776,6 +3838,7 @@ a:hover, a:active, a:focus {
   background: #fff;
   border: 0.5px solid #B9B9B9;
   margin-right: 20px;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3790,6 +3853,11 @@ a:hover, a:active, a:focus {
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   padding-top: 30px;
   padding-bottom: 30px;
+}
+@media (max-width: 575.98px) {
+  .c-price-panel {
+    margin-right: 0;
+  }
 }
 .c-price-panel:last-child {
   margin-left: 0;
