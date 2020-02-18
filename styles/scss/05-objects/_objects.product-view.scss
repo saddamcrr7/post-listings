@@ -30,6 +30,7 @@
         color: $color-green;
         font-size: 12px;
         font-family: $RobotoCondensedFontFamily;
+        white-space: nowrap;
 
         &,
         &:hover {
@@ -40,6 +41,16 @@
     &__sort {
         display: flex;
         align-items: center;
+
+        @include media-breakpoint-down(xs) {
+            .c-input-select {
+                width: 120px;
+
+                &__options-item {
+                    padding: 10px 5px;
+                }
+            }
+        }
     }
 
     &__style {

@@ -39,6 +39,10 @@
     // For start/end transition
     @include transition(opacity 0.15s ease 0s);
 
+    @include media-breakpoint-down(sm) {
+        top: 51px;
+    }
+
     * {
         @include box-sizing(border-box);
     }
@@ -215,6 +219,10 @@
 
     &.in {
         opacity: $backdrop-opacity;
+    }
+
+    @include media-breakpoint-down(sm) {
+        top: 51px;
     }
 }
 

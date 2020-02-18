@@ -9,6 +9,12 @@ $itemMargin: 30px;
         margin-left: - $itemMargin / 2;
         margin-right: - $itemMargin / 2;
         justify-content: space-between;
+
+
+        @include media-breakpoint-down(md) {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 
     &__image-wiew {
@@ -23,6 +29,18 @@ $itemMargin: 30px;
             width: 100%;
             height: 100%;
             @include object-fit(cover);
+        }
+
+        @include media-breakpoint-down(md) {
+            height: 350px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            height: 250px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            height: 200px;
         }
     }
 
@@ -44,6 +62,20 @@ $itemMargin: 30px;
             width: 100%;
             height: 100%;
             @include object-fit(cover);
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 24%;
+            height: 100px;;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            height: 70px;
+        }
+        @include media-breakpoint-down(xs) {
+            height: 50px;
         }
     }
 
@@ -92,6 +124,12 @@ $itemMargin: 30px;
 .lg-next {
     height: 85px;
     width: 43px;
+
+    @include media-breakpoint-down(sm) {
+        width: 45px;
+        height: 40px;
+        margin: 0 !important;
+    }
 }
 
 .lg-close {

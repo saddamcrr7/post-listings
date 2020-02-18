@@ -9,7 +9,7 @@ $terms-conditions-link-color: #7AAFFF;
     }
 
     &__row {
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             flex-direction: column-reverse;
         }
     }

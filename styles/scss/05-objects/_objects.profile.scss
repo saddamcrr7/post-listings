@@ -5,8 +5,20 @@
 
     @include media-breakpoint-down(sm) {
         padding: 20px;
+
+        .c-menu__options {
+            left: auto;
+            right: 0;
+            transform: translateX(0);
+
+            &::before {
+                left: auto;
+                right: 5px;
+                transform: translateX(0) rotate(45deg);
+            }
+        }
     }
-    
+
     &__top {
         min-height: 30px;
         display: flex;
@@ -21,7 +33,7 @@
         align-items: center;
     }
 
-    &__like svg{
+    &__like svg {
         width: 20px;
         height: 20px;
         fill: $color-yellow;
@@ -101,7 +113,8 @@
         margin-bottom: 7px;
     }
 
-    &__number, &__email {
+    &__number,
+    &__email {
         color: rgba(#C8C8C8, 0.9);
         font-size: 13px;
         margin-bottom: 7px;

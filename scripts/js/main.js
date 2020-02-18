@@ -15,9 +15,6 @@ toggler.addEventListener('click', ()=> {
     toggler.classList.remove('is-active')
     isNavOpen = 0
   }
-
-  console.log(isNavOpen);
-  
 })
 
 

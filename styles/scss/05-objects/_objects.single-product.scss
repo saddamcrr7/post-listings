@@ -3,6 +3,22 @@
     background: $white;
     box-shadow: 0px 3px 6px #00000014;
 
+    @include media-breakpoint-down(xs) {
+       padding: 20px 10px;
+
+       .c-menu__options {
+        left: auto;
+        right: 0;
+        transform: translateX(0);
+
+        &::before {
+            left: auto;
+            right: 5px;
+            transform: translateX(0) rotate(45deg);
+        }
+    }
+    }
+
     &__top {
         display: flex;
         align-items: flex-start;
@@ -132,9 +148,11 @@
         font-family: $RobotoCondensedFontFamily;
         padding: 10px;
         width: 100%;
+        margin-bottom: $grid-gutter-width / 2;
 
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(md) {
             max-width: 260px;
+            margin-bottom: 0;
         }
     }
 
@@ -155,7 +173,7 @@
             outline: none;
         }
 
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(md) {
             max-width: 298px;
         }
     }
@@ -243,9 +261,11 @@
     .c-product__price {
         width: 100%;
         border-radius: 5px;
+        margin-bottom: $grid-gutter-width / 2;
 
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(xl) {
             max-width: 340px;
+            margin-bottom: 0;
         }
     }
 
@@ -253,7 +273,7 @@
         width: 100%;
         border-radius: 5px;
 
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(xl) {
             max-width: 400px;
         }
     }
