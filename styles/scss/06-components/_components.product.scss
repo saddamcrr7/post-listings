@@ -310,7 +310,13 @@
         margin-bottom: 10px;
         border-radius: 3px;
 
+        &>.c-product__tag {
+            display: none;
+        }
+
         #{$root} {
+
+            
 
             &__thumb {
                 height: 133px;
@@ -391,6 +397,10 @@
 
     &--small {
         @include hideCnotentForSmMd($root);
+
+        &>.c-product__tag {
+            display: none;
+        }
 
         #{$root} {
             &__thumb {

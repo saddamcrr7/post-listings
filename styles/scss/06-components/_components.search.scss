@@ -2,7 +2,7 @@
     $root: &;
 
     @include make-container();
-    @include make-container-max-widths();
+    max-width: 1248px;
     margin-top: 62px;
     margin-bottom: 41px;
 

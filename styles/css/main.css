@@ -1389,6 +1389,16 @@ a:hover, a:active, a:focus {
   -webkit-transition: 0.1s ease-in-out;
   transition: 0.1s ease-in-out;
 }
+@media (max-width: 991.98px) {
+  .o-product-view .c-product--medium {
+    width: 130px !important;
+    -webkit-box-flex: 130px !important;
+        -ms-flex: 130px !important;
+            flex: 130px !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+  }
+}
 .o-product-view .c-product--small {
   margin-bottom: 10px;
 }
@@ -2663,16 +2673,17 @@ a:hover, a:active, a:focus {
   padding: 14px 20px;
   border-radius: 5px;
   font-size: 14px;
-  color: rgba(95, 97, 123, 0.5);
+  color: #363636;
   font-family: "Open Sans", sans-serif;
   width: 100%;
 }
-.o-create-listing__input--title {
+.o-create-listing__input:focus {
+  outline: none;
   border: 2px solid #3EC471;
   background: #F2F5F3;
 }
-.o-create-listing__input:focus {
-  outline: none;
+.o-create-listing__input:placeholder {
+  color: rgba(95, 97, 123, 0.5);
 }
 .o-create-listing__characteristics {
   margin-bottom: 50px;
@@ -2949,6 +2960,7 @@ a:hover, a:active, a:focus {
 @media (max-width: 767.98px) {
   .c-nav__navbar-link {
     font-size: 20px;
+    color: #fff;
   }
   .c-nav__navbar-link::before {
     display: none;
@@ -3076,11 +3088,14 @@ a:hover, a:active, a:focus {
   z-index: 1001;
   -webkit-transition: height 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   transition: height 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-box-shadow: 1px 1px 3px rgba(54, 54, 54, 0.1);
+          box-shadow: 1px 1px 3px rgba(54, 54, 54, 0.1);
 }
 .c-input-select__options-item, .c-input-select__options-sub-item {
   position: relative;
   padding: 10px 25px;
   background: #fff;
+  font-size: 11px;
 }
 .c-input-select__options-item:hover .c-input-select__options-sub, .c-input-select__options-sub-item:hover .c-input-select__options-sub, .c-input-select__options-item:active .c-input-select__options-sub, .c-input-select__options-sub-item:active .c-input-select__options-sub, .c-input-select__options-item:focus .c-input-select__options-sub, .c-input-select__options-sub-item:focus .c-input-select__options-sub {
   display: block;
@@ -3105,7 +3120,7 @@ a:hover, a:active, a:focus {
 }
 .c-input-select__options-sub {
   position: absolute;
-  top: 20px;
+  top: 10px;
   left: 100%;
   background: #fff;
   display: -webkit-box;
@@ -3116,7 +3131,18 @@ a:hover, a:active, a:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 80%;
+  max-height: 600px;
   display: none;
+  overflow: auto;
+  -webkit-box-shadow: 1px 1px 3px rgba(54, 54, 54, 0.1);
+          box-shadow: 1px 1px 3px rgba(54, 54, 54, 0.1);
+}
+@media (max-width: 991.98px) {
+  .c-input-select__options-sub {
+    width: 100%;
+    top: 100%;
+    left: 0;
+  }
 }
 .c-input-select__icon {
   position: absolute;
@@ -3133,28 +3159,9 @@ a:hover, a:active, a:focus {
   padding-left: 10px;
   margin-right: auto;
   margin-left: auto;
+  max-width: 1248px;
   margin-top: 62px;
   margin-bottom: 41px;
-}
-@media (min-width: 576px) {
-  .c-search {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .c-search {
-    max-width: 728px;
-  }
-}
-@media (min-width: 992px) {
-  .c-search {
-    max-width: 1020px;
-  }
-}
-@media (min-width: 1200px) {
-  .c-search {
-    max-width: 1360px;
-  }
 }
 .c-search__row {
   display: -webkit-box;
@@ -3553,6 +3560,9 @@ a:hover, a:active, a:focus {
   margin-bottom: 10px;
   border-radius: 3px;
 }
+.c-product--wide > .c-product__tag {
+  display: none;
+}
 .c-product--wide .c-product__thumb {
   height: 133px;
   -webkit-box-flex: 0;
@@ -3614,6 +3624,9 @@ a:hover, a:active, a:focus {
   height: 14px;
 }
 .c-product--small .c-product__options, .c-product--small .c-product__sub, .c-product--small .c-product__meta-date {
+  display: none;
+}
+.c-product--small > .c-product__tag {
   display: none;
 }
 .c-product--small .c-product__thumb {
@@ -4375,6 +4388,12 @@ a:hover, a:active, a:focus {
   margin-left: -10px;
 }
 
+.u-justify-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .u-col {
   position: relative;
   width: 100%;
@@ -4457,6 +4476,11 @@ a:hover, a:active, a:focus {
 .u-my-30 {
   margin-top: 30px !important;
   margin-bottom: 30px !important;
+}
+
+.u-my-20 {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
 }
 
 .u-ml-10 {

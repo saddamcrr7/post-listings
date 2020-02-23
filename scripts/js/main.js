@@ -396,17 +396,18 @@ const xLg = window.matchMedia("(max-width: 1024px)")
 const xMd = window.matchMedia("(max-width: 768px)")
 
 
-const wideProducts = document.querySelectorAll('.c-product--wide')
 
 function productResposive() {
+  const wideProducts = document.querySelectorAll('.o-product-view .c-product')
 
   if (xLg.matches) { 
-    
     wideProducts.forEach(wideProduct => {
       wideProduct.classList.add('c-product--small')
     })
   } else {
-   
+    wideProducts.forEach(wideProduct => {
+      wideProduct.classList.remove('c-product--small')
+    })
   }
 }
 

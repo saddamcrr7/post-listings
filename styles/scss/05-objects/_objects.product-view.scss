@@ -90,6 +90,15 @@
         transition: 0.1s ease-in-out;
     }
 
+    .c-product--medium {
+        @include media-breakpoint-down(md) {
+            width: 130px !important;
+            flex: 130px !important;
+            margin-left: 5px !important;
+            margin-right: 5px !important;
+        }
+    }
+
     .c-product--small {
         margin-bottom: 10px;
     }

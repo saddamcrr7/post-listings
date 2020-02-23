@@ -20,13 +20,15 @@
         height: 0px;
         overflow: hidden;
         z-index: map-get($z-layers, select-options);
-        @include  basic-transition(height, 0.3s)
+        @include  basic-transition(height, 0.3s);
+        box-shadow: 1px 1px 3px rgba($color-dark, 0.1);
     }
 
     &__options-item {
         position: relative;
         padding: 10px 25px;
         background: $white;
+        font-size: 11px;
 
         @include on-event() {
             #{$root}__options-sub {
@@ -59,13 +61,22 @@
 
     &__options-sub {
         position: absolute;
-        top: 20px;
+        top: 10px;
         left: 100%;
         background: $white;
         display: flex;
         flex-direction: column;
         width: 80%;
+        max-height: 600px;
         display: none;
+        overflow: auto;
+        box-shadow: 1px 1px 3px rgba($color-dark, 0.1);
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            top: 100%;
+            left: 0;
+        }
     }
 
     &__options-sub-item {
