@@ -183,8 +183,15 @@
 
     &__pricing-row {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         margin-bottom: 12px;
+
+        @include media-breakpoint-down(xs) {
+            .c-switch {
+                margin-top: 10px;
+            }
+        }
     }
 
     &__pricing-input-wrap {
