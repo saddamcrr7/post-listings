@@ -3149,6 +3149,12 @@ a:hover, a:active, a:focus {
     width: 100%;
     top: 100%;
     left: 0;
+    max-height: 500px;
+  }
+}
+@media (max-width: 575.98px) {
+  .c-input-select__options-sub {
+    max-height: 300px;
   }
 }
 .c-input-select__icon {

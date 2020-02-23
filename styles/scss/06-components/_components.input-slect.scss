@@ -76,6 +76,11 @@
             width: 100%;
             top: 100%;
             left: 0;
+            max-height: 500px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            max-height: 300px;
         }
     }
 
