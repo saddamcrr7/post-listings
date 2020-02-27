@@ -72,6 +72,12 @@
         }
     }
 
+    @include media-breakpoint-down(md) {
+        #{$root}__tag {
+            opacity: 1;
+        }
+    }
+
     &__top {
         display: flex;
         align-items: flex-start;
@@ -310,6 +316,10 @@
         margin-bottom: 10px;
         border-radius: 3px;
 
+        @include media-breakpoint-down(sm) {
+            padding: 10px;
+        }
+
         &>.c-product__tag {
             display: none;
         }
@@ -409,11 +419,15 @@
                 height: 99px;
                 margin-right: 10px;
 
-                @include media-breakpoint-down(xs) {
-                    max-width: 90px;
-                    flex: 0 0 90px;
-                    height: 70px;
-                }
+                // @include media-breakpoint-down(xs) {
+                //     max-width: 90px;
+                //     flex: 0 0 90px;
+                //     height: 70px;
+                // }
+            }
+
+            &__content {
+                flex: 1;
             }
 
             &__delete {

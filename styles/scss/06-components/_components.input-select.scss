@@ -20,7 +20,7 @@
         height: 0px;
         overflow: hidden;
         z-index: map-get($z-layers, select-options);
-        @include  basic-transition(height, 0.3s);
+        @include basic-transition(height, 0.3s);
         box-shadow: 1px 1px 3px rgba($color-dark, 0.1);
     }
 
@@ -30,11 +30,9 @@
         background: $white;
         font-size: 11px;
 
-        @include on-event() {
-            #{$root}__options-sub {
+            &:hover > #{$root}__options-sub {
                 display: block;
             }
-        }
 
         &.has-sub-item {
             &::after {
@@ -42,7 +40,7 @@
                 position: absolute;
                 top: 50%;
                 right: 10px;
-                transform: translateY(-50%)  rotate(-45deg);
+                transform: translateY(-50%) rotate(-45deg);
                 border: solid #707070;
                 border-width: 0 1px 1px 0;
                 display: inline-block;
@@ -69,8 +67,9 @@
         width: 80%;
         max-height: 600px;
         display: none;
-        overflow: auto;
+        // overflow: auto;
         box-shadow: 1px 1px 3px rgba($color-dark, 0.1);
+        z-index: 2;
 
         @include media-breakpoint-down(md) {
             width: 100%;
@@ -87,6 +86,9 @@
     &__options-sub-item {
         @extend .c-input-select__options-item;
 
+        @include media-breakpoint-down(md) {
+            padding-left: 40px;
+        }
     }
 
     &__icon {

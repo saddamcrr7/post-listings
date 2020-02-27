@@ -15,10 +15,10 @@
 }
 
 .u-col--categories {
-    display: none;
+    margin-bottom: 20px;
 
     @include media-breakpoint-up(lg) {
-        display: block;
+        margin-bottom: 0;
         @include make-col(2.3)
     }
 }

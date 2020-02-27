@@ -4,7 +4,6 @@
     width: 100%;
     height: 100%;
     padding: 17px 30px;
-    margin-bottom: 40px;
     background: $white;
     border-radius: 2px;
     box-shadow: 0px 0px 10px #00000014;
@@ -15,6 +14,9 @@
         font-size: 13px;
         font-family: $RobotoCondensedFontFamily;
         font-weight: $font-weight-bold;
+        @include media-breakpoint-down(sm) {
+           display: none;
+        }
     }
 
     &__list {
@@ -22,6 +24,15 @@
         margin-bottom: 0;
         padding-left: 0;
         list-style: none;
+
+        @include media-breakpoint-down(md) {
+            display: flex;
+            overflow-x: auto;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 3px;
+         }
     }
 
     &__item-name {
@@ -29,17 +40,37 @@
         margin-left: 10px;
         color: $color-dark-1;
         font-family: $RobotoCondensedFontFamily;
+
+        @include media-breakpoint-down(md) {
+            margin-left: 0;
+            position: relative;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: $color-orange;
+
+            }
+        }
     }
 
     &__item {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
         margin-bottom: 18px;
+        @include media-breakpoint-down(md) {
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
 
-        &--active, &:hover {
+        &:hover {
             #{$root}__item-icon svg {
-                fill:  $color-green;
+                fill: $color-green;
             }
 
             #{$root}__item-name {
@@ -52,6 +83,23 @@
                 opacity: 1;
                 visibility: visible;
             }
+        }
+    }
+
+    &__item-content {
+        display: flex;
+        align-items: center;
+
+        @include on-event() {
+            #{$root}__megamenu {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            justify-content: flex-start;
         }
     }
 }
