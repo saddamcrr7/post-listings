@@ -28,6 +28,7 @@
         @include media-breakpoint-down(md) {
             display: flex;
             overflow-x: auto;
+            align-items: flex-end;
         }
 
         @include media-breakpoint-down(sm) {
@@ -47,6 +48,9 @@
             padding-left: 10px;
             padding-right: 10px;
             padding-bottom: 5px;
+            font-size: 11px;
+            line-height: 11px;
+            text-align: center;
 
             &::before {
                 content: '';
